@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+// import { useState } from "react";
+import styled from "styled-components";
+import { Box } from "@mui/material";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./Layout/Header";
+import Footer from "./Layout/Footer";
+// import logo from './logo.svg';
+// import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <StyledComponent>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Content />} />
+        </Routes>
+        <Footer />
+      </StyledComponent>
+    </BrowserRouter>
   );
-}
+};
+
+const StyledComponent = styled(Box)`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+`;
 
 export default App;
