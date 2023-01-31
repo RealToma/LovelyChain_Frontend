@@ -19,7 +19,7 @@ export const lightTheme = {
 
 export const darkTheme = {
   palette: {
-    mode: "dark",
+    mode: "light",
     primary: {
       main: "#EA4694",
       back: "#FFFFFF",

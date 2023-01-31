@@ -16,15 +16,16 @@ const App = () => {
   }, [flagTheme]);
 
   return (
-    <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <StyledComponent background={'secondary.main'}>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <StyledComponent bgcolor={secondary.back}>
+          123
           <Header flagTheme={flagTheme} setFlagTheme={setFlagTheme} />
-          <Routes>{/* <Route path="/" element={<Content />} /> */}</Routes>
+          {/* <Routes><Route path="/" element={<Content />} /></Routes> */}
           <Footer />
         </StyledComponent>
-      </ThemeProvider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 };
 
@@ -32,10 +33,10 @@ const StyledComponent = styled(Box)`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
-  mix-blend-mode: color;
+  height: 100vh;
+  /* mix-blend-mode: color; */
 
-  overflow-y: auto;
+  /* overflow-y: auto; */
 `;
 
 export default App;
