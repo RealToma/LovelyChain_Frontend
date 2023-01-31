@@ -6,7 +6,7 @@ import Footer from "./Layout/Footer";
 import { ThemeProvider } from "@mui/material/styles";
 import { lightTheme, darkTheme } from "./Data/Theme";
 const App = () => {
-  const [flagTheme, setFlagTheme] = useState("light");
+  const [flagTheme, setFlagTheme] = useState("dark");
 
   return (
     <ThemeProvider theme={flagTheme === "light" ? lightTheme : darkTheme}>

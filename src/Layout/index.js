@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
   const theme = useTheme();
 
   return (
-    <StyledComponent bgcolor={theme.palette.secondary.back}>
+    <StyledComponent bgcolor={theme.palette.secondary.main}>
       <MaxComponet>{children}</MaxComponet>
       <ImgBack>
         <img src={imgMainBack} width={"100%"} alt="imgBack" />
@@ -39,6 +39,8 @@ const MaxComponet = styled(Box)`
   /* mix-blend-mode: color; */
   padding: 0px 70px;
   box-sizing: border-box;
+  z-index: 1;
+  
 `;
 
 const ImgBack = styled(Box)`
@@ -47,6 +49,8 @@ const ImgBack = styled(Box)`
   top: 0px;
   right: 0px;
   width: 100%;
+  z-index: 0;
 `;
+
 
 export default Layout;
