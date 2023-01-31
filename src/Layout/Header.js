@@ -12,7 +12,12 @@ const Header = ({ flagTheme, setFlagTheme }) => {
       <SectionLogoMark>
         <img src={imgLogoMark} width={"100%"} height={"100%"} alt="logoMark" />
       </SectionLogoMark>
-      <ButtonThemeSwitch bgcolor={theme.palette.secondary.main + 56}>
+      <ButtonThemeSwitch
+        bgcolor={theme.palette.secondary.main + 56}
+        onClick={() => {
+          setFlagTheme(flagTheme === "dark" ? "light" : "dark");
+        }}
+      >
         <FaMoon color={theme.palette.primary.main} fontSize={"1.2rem"} />
       </ButtonThemeSwitch>
       <SectionSearch>
@@ -67,6 +72,7 @@ const ButtonThemeSwitch = styled(Box)`
   align-items: center;
   padding: 0px 6px;
   box-sizing: border-box;
+  cursor: pointer;
 `;
 
 const SectionSearch = styled(Box)`

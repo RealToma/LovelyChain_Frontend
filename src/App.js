@@ -9,7 +9,7 @@ const App = () => {
   const [flagTheme, setFlagTheme] = useState("dark");
 
   return (
-    <ThemeProvider theme={flagTheme === "light" ? lightTheme : darkTheme}>
+    <ThemeProvider theme={flagTheme === "dark" ? darkTheme : lightTheme}>
       <BrowserRouter>
         <Layout>
           <Header flagTheme={flagTheme} setFlagTheme={setFlagTheme} />
