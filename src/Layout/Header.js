@@ -4,6 +4,8 @@ import { useTheme } from "@mui/material/styles";
 import imgLogoMark from "../Assets/Images/Icon/logoMark.png";
 import { FaMoon } from "react-icons/fa";
 import { BiSearch } from "react-icons/bi";
+import { dataLink } from "../Data/Link";
+import HeaderLink from "../Components/Link/HeaderLink";
 
 const Header = ({ flagTheme, setFlagTheme }) => {
   const theme = useTheme();
@@ -18,7 +20,7 @@ const Header = ({ flagTheme, setFlagTheme }) => {
           setFlagTheme(flagTheme === "dark" ? "light" : "dark");
         }}
       >
-        <FaMoon color={theme.palette.primary.main} fontSize={"1.2rem"} />
+        <FaMoon color={theme.palette.primary.main} fontSize={"1rem"} />
       </ButtonThemeSwitch>
       <SectionSearch>
         <IconSearch color={theme.palette.secondary.text}>
@@ -30,6 +32,11 @@ const Header = ({ flagTheme, setFlagTheme }) => {
           placeholder={"Search by address, txn hash..."}
         />
       </SectionSearch>
+      <LinkGroup>
+        {dataLink.map((each, index) => {
+          return <HeaderLink data={each} key={index} />;
+        })}
+      </LinkGroup>
     </StyledComponent>
   );
 };
@@ -100,6 +107,9 @@ const InputSearch = styled(Box)`
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
+    /* identical to box height, or 16px */
+
+    letter-spacing: 0.01em;
     color: #ffffff48;
   }
 
@@ -110,6 +120,9 @@ const InputSearch = styled(Box)`
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
+    /* identical to box height, or 16px */
+
+    letter-spacing: 0.01em;
     color: #ffffff48;
   }
 
@@ -120,8 +133,16 @@ const InputSearch = styled(Box)`
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
+    /* identical to box height, or 16px */
+
+    letter-spacing: 0.01em;
     color: #ffffff48;
   }
+`;
+
+const LinkGroup = styled(Box)`
+  display: flex;
+  align-items: center;
 `;
 
 export default Header;
