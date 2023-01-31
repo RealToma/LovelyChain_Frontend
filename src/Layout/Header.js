@@ -40,22 +40,13 @@ const StyledComponent = styled(Box)`
   height: 96px;
   justify-content: space-between;
   align-items: center;
-  font-family: "Neue Plak";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 110%;
-  /* or 35px */
-
-  letter-spacing: 0.01em;
-
-  color: #ffffff;
 `;
 
 const SectionLogoMark = styled(Box)`
   display: flex;
   width: 200px;
   height: 28px;
+  user-select: none;
   cursor: pointer;
 `;
 
@@ -77,7 +68,7 @@ const ButtonThemeSwitch = styled(Box)`
 
 const SectionSearch = styled(Box)`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-right: 50px;
 `;
 
