@@ -1,4 +1,4 @@
-import { FaTwitter, FaTelegramPlane, FaFacebook } from "react-icons/fa";
+import { FaTwitter, FaTelegramPlane, FaFacebookF } from "react-icons/fa";
 
 export const dataFooterContact = [
   {
@@ -71,7 +71,7 @@ export const dataFooterIconContact = [
     link: "facebook",
   },
   {
-    icon: <FaFacebook />,
+    icon: <FaFacebookF />,
     link: "telegram",
   },
 ];
