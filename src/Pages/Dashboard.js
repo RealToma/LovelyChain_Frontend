@@ -10,9 +10,12 @@ const Dashboard = () => {
   return (
     <StyledComponent>
       <SectionStats>
-        {dataStatsDashboard.map((each, index) => {
-          return <StatsComponent key={index} data={each} index={index} />;
-        })}
+        <StatsText>
+          {dataStatsDashboard.map((each, index) => {
+            return <StatsComponent key={index} data={each} index={index} />;
+          })}
+        </StatsText>
+        <StatsProgress>12213</StatsProgress>
       </SectionStats>
     </StyledComponent>
   );
@@ -32,6 +35,16 @@ const SectionStats = styled(Box)`
   justify-content: space-between;
 `;
 
+const StatsText = styled(Box)`
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 32px;
+`;
 
+const StatsProgress = styled(Box)`
+  display: flex;
+`;
 
 export default Dashboard;

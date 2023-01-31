@@ -128,29 +128,27 @@ const EachTextContactGroup = styled(Box)`
 `;
 
 const TextHeader = styled(Box)`
-  font-family: "DM Sans";
+  font-family: "Neue Plak";
   font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
-  /* identical to box height, or 133% */
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  /* identical to box height, or 20px */
 
-  /* White */
+  letter-spacing: 0.01em;
 
   margin-bottom: 32px;
 `;
 
 const EachTextContactLink = styled(Box)`
-  font-family: "DM Sans";
+  font-family: "Neue Plak";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
-  /* identical to box height, or 157% */
+  font-size: 16px;
+  line-height: 100%;
+  /* identical to box height, or 16px */
 
-  text-transform: capitalize;
-
-  /* Secondary 2 */
+  letter-spacing: 0.01em;
   margin-bottom: 32px;
 `;
 
