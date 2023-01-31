@@ -2,7 +2,8 @@ import { ReactNode } from "react";
 import styled from "styled-components";
 import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import imgMainBack from "../Assets/Images/Background/mainBack.png";
+import imgMainBackDark from "../Assets/Images/Background/mainBack_Dark.png";
+import imgMainBackLight from "../Assets/Images/Background/mainBack_Light.png"
 
 const Layout = ({ children }) => {
   const theme = useTheme();
@@ -11,7 +12,7 @@ const Layout = ({ children }) => {
     <StyledComponent bgcolor={theme.palette.secondary.main}>
       <MaxComponet>{children}</MaxComponet>
       <ImgBack>
-        <img src={imgMainBack} width={"100%"} alt="imgBack" />
+        <img src={imgMainBackDark} width={"100%"} alt="imgBack" />
       </ImgBack>
     </StyledComponent>
   );

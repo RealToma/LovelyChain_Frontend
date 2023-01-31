@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 const HeaderLink = ({ data }) => {
   const navigate = useNavigate();
@@ -11,11 +12,14 @@ const HeaderLink = ({ data }) => {
       {!data.flagSubLink ? (
         <LinkMainText
           color={theme.palette.link.main}
-          onClick={() => {
-            navigate.push(data.link);
-          }}
+          // onClick={() => {
+          //   navigate(data.link);
+          // }}
         >
-          {data.name}
+          <Box display={"flex"}>{data.name}</Box>
+          <IconDown color={theme.palette.link.main}>
+            <MdKeyboardArrowDown />
+          </IconDown>
         </LinkMainText>
       ) : (
         <LinkMainText color={theme.palette.link.main}>{data.name}</LinkMainText>
@@ -31,9 +35,10 @@ const StyledComponent = styled(Box)`
 
 const LinkMainText = styled(Box)`
   display: flex;
+  align-items: center;
   font-family: "Neue Plak";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 14px;
   line-height: 100%;
   /* identical to box height, or 14px */
@@ -46,6 +51,21 @@ const LinkMainText = styled(Box)`
   &:hover {
     color: #ea4694;
   }
+`;
+
+const IconDown = styled(Box)`
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 6px;
+  font-size: 1.3rem;
+  margin-left: 8px;
 `;
 
 export default HeaderLink;

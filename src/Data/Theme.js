@@ -15,7 +15,10 @@ export const darkTheme = {
       negative: "#FF5070",
     },
     link: {
-      main: '#FFFFFF'
+      main: '#FFFFFF',
+      fIconContactBorder: '1px solid rgba(255, 255, 255, 0.08)',
+      fIconContactBack: 'rgba(30, 33, 52, 0.24)',
+      fIconContactColor: '#FFFFFF', 
     }
   },
 };
@@ -37,7 +40,10 @@ export const lightTheme = {
       negative: "#FF5070",
     },
     link: {
-      main: '#171929'
+      main: '#171929',
+      fIconContactBorder: '1px solid rgba(23, 25, 41, 0.08)',
+      fIconContactBack: 'rgba(255, 255, 255, 0.24)',
+      fIconContactColor: '#171929', 
     }
   },
 };
