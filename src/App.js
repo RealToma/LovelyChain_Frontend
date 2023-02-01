@@ -17,6 +17,7 @@ const App = () => {
           <Header flagTheme={flagTheme} setFlagTheme={setFlagTheme} />
           <Routes>
             <Route path="/" element={<Dashboard />} />
+            <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
           <Footer />
         </Layout>

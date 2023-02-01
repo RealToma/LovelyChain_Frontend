@@ -66,6 +66,7 @@ const StyledComponent = styled(Box)`
   display: flex;
   width: 100%;
   justify-content: space-between;
+  margin: 30px 0px;
 `;
 
 const SectionLeft = styled(Box)`
@@ -121,7 +122,7 @@ const IconContact = styled(Box)`
 const EachTextContactGroup = styled(Box)`
   display: flex;
   flex-direction: column;
-  margin-left: 132px;
+  margin-left: 120px;
 `;
 
 const TextHeader = styled(Box)`

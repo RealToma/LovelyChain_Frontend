@@ -97,6 +97,7 @@ iframe {
   font-style: "normal";
   src: url("./Assets/Fonts/Neue_Plak/Neue\ Plak\ Extended\ Bold.ttf");
 }
+
 @font-face {
   font-size: 14px;
   line-height: 110%;
@@ -106,6 +107,16 @@ iframe {
   font-style: "normal";
   src: url("./Assets/Fonts/Neue_Plak/Neue\ Plak\ Extended\ SemiBold.ttf");
 }
+
+@font-face {
+  font-family: "Neue Plak";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  src: url("./Assets/Fonts/Neue_Plak/Neue\ Plak\ Regular.ttf");
+}
+
 
 @font-face {
   font-size: 12px;

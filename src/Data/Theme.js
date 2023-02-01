@@ -13,6 +13,7 @@ export const darkTheme = {
     tertiary: {
       positive: "#15B341",
       negative: "#FF5070",
+      back: "#1E2134",
     },
     link: {
       main: "#FFFFFF",
@@ -71,6 +72,19 @@ export const darkTheme = {
         shadow: "inset 0px 0px 32px #171929",
       },
     ],
+    dashboard: {
+      premium: {
+        border: "1px solid rgba(255, 255, 255, 0.16)",
+        boxShadow: "inset 0px 0px 32px #171929",
+        backButton: "rgba(23, 25, 41, 0.24)",
+      },
+      tableTransHistory: {
+        background:
+          "radial-gradient(76.41% 167.67% at -17.61% 20.33%, rgba(234, 70, 148, 0.64) 0%, rgba(234, 70, 148, 0) 100%, rgba(30, 33, 52, 0.56)",
+        border: "1px solid rgba(255, 255, 255, 0.16)",
+        boxShadow: "inset 0px 0px 32px rgba(23, 25, 41, 0.8)",
+      },
+    },
   },
 };
 
@@ -89,6 +103,7 @@ export const lightTheme = {
     tertiary: {
       positive: "#15B341",
       negative: "#FF5070",
+      back: "#FFFFFF",
     },
     circleProgress: {
       back: "rgba(30, 33, 52, 0.08)",
@@ -146,5 +161,17 @@ export const lightTheme = {
         shadow: "inset 0px 0px 32px rgba(255, 255, 255, 0.8)",
       },
     ],
+    dashboard: {
+      premium: {
+        border: " 1px solid rgba(23, 25, 41, 0.16)",
+        boxShadow: " inset 0px 0px 32px rgba(255, 255, 255, 0.8)",
+        backButton: " rgba(255, 255, 255, 0.16)",
+      },
+      tableTransHistory: {
+        background: "radial-gradient(210.58% 100% at 50% 112.43%, rgba(234, 70, 148, 0.24) 0%, rgba(234, 70, 148, 0) 100%, rgba(30, 33, 52, 0.04)",
+        border: "1px solid rgba(23, 25, 41, 0.12)",
+        boxShadow: "inset 0px 0px 32px rgba(255, 255, 255, 0.8)",
+      },
+    },
   },
 };

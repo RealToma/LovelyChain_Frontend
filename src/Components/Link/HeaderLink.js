@@ -48,23 +48,31 @@ const HeaderLink = ({ data, flagTheme }) => {
             >
               {data.subLink.map((each, index) => {
                 return (
-                  <Link
-                    to={each.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ textDecoration: "none" }}
+                  <EachText
+                    color={theme.palette.link.main}
+                    key={index}
+                    onClick={() => {
+                      navigate(each.link);
+                      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                    }}
                   >
-                    <EachText color={theme.palette.link.main} key={index}>
-                      {each.name}
-                    </EachText>
-                  </Link>
+                    {each.name}
+                  </EachText>
                 );
               })}
             </SectionDropDown>
           )}
         </LinkMainText>
       ) : (
-        <LinkMainText color={theme.palette.link.main}>{data.name}</LinkMainText>
+        <LinkMainText
+          color={theme.palette.link.main}
+          onClick={() => {
+            navigate(data.link);
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+          }}
+        >
+          {data.name}
+        </LinkMainText>
       )}
     </StyledComponent>
   );

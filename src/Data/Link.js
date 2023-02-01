@@ -1,65 +1,65 @@
 export const dataLink = [
   {
     name: "Dashboard",
-    link: "/dashboard",
+    link: "dashboard",
     flagSubLink: false,
     subLink: [],
   },
   {
     name: "Blocks",
-    link: "/blocks",
+    link: "blocks",
     flagSubLink: true,
     subLink: [
       {
         name: "Blocks",
-        link: "/blocks",
+        link: "blocks",
       },
       {
         name: "Uncles",
-        link: "/uncles",
+        link: "uncles",
       },
       {
         name: "Forkes",
-        link: "/forkes",
+        link: "forkes",
       },
     ],
   },
   {
     name: "Transactions",
-    link: "/transactions",
+    link: "transactions",
     flagSubLink: true,
     subLink: [
       {
         name: "Validated",
-        link: "/validated",
+        link: "validated",
       },
       {
         name: "Pending",
-        link: "/pending",
+        link: "pending",
       },
     ],
   },
   {
     name: "Tokens",
-    link: "/tokens",
+    link: "tokens",
     flagSubLink: false,
   },
   {
     name: "APIs",
-    link: "/apis",
+    link: "apis",
     flagSubLink: true,
     subLink: [
       {
         name: "GraphQL",
-        link: "/graphql",
+        link: "graphql",
       },
       {
         name: "RPC",
-        link: "/rpc",
+        link: "rpc",
       },
       {
         name: "Lovely PC",
-        link: "/lovleypc",
+        link: "lovleypc",
       },
     ],
   },
