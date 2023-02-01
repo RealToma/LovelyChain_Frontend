@@ -2,14 +2,10 @@ import styled from "styled-components";
 import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
-
 const Dashboard = () => {
   const theme = useTheme();
 
-  return (
-    <StyledComponent>
-    </StyledComponent>
-  );
+  return <StyledComponent></StyledComponent>;
 };
 
 const StyledComponent = styled(Box)`
@@ -17,7 +13,7 @@ const StyledComponent = styled(Box)`
   width: 100%;
   flex-direction: column;
   margin-top: 50px;
+  margin-bottom: 100px;
 `;
-
 
 export default Dashboard;

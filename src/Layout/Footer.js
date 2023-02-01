@@ -66,7 +66,7 @@ const StyledComponent = styled(Box)`
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin: 30px 0px;
+  margin: 50px 0px;
 `;
 
 const SectionLeft = styled(Box)`

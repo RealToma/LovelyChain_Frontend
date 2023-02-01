@@ -8,7 +8,7 @@ import imgRocket from "../Assets/Images/Icon/rocket.png";
 import imgPremiumLove from "../Assets/Images/Background/premiumLove.png";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import BoxBlock from "../Components/Box/BoxBlock";
-import DashboardTransHistory from "../Components/Table/DashboardTransHistory";
+import TableDashboardTransHistory from "../Components/Table/TableDashboardTransHistory";
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -88,7 +88,7 @@ const Dashboard = () => {
             </SectionViewAll>
           </SectoinTextHeadTransHistory>
           <SectionTableTransHistory>
-            <DashboardTransHistory data={dataDashboardTransHistory} />
+            <TableDashboardTransHistory data={dataDashboardTransHistory} />
           </SectionTableTransHistory>
         </SectionTransHistory>
         <SectionPremium
@@ -123,7 +123,7 @@ const StyledComponent = styled(Box)`
   width: 100%;
   flex-direction: column;
   margin-top: 50px;
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 `;
 
 const SectionStats = styled(Box)`
@@ -321,7 +321,7 @@ const SectionPremium = styled(Box)`
   flex-direction: column;
   justify-content: space-between;
   width: 300px;
-  height: 470px;
+  height: 490px;
   background: rgba(234, 70, 148, 0.96);
   backdrop-filter: blur(10px);
   border-radius: 24px;
@@ -401,7 +401,6 @@ const TextPremiumDown = styled(Box)`
 const SectionTableTransHistory = styled(Box)`
   display: flex;
   width: 100%;
-  margin-top: 24px;
 `;
 
 export default Dashboard;

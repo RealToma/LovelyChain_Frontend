@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { MdOutlineAccountBalanceWallet } from "react-icons/md";
 
-const DashboardTransHistory = ({ data }) => {
+const TableDashboardTransHistory = ({ data }) => {
   const theme = useTheme();
 
   return (
@@ -18,7 +18,7 @@ const DashboardTransHistory = ({ data }) => {
         return (
           <TableRow
             key={index}
-            sx={{ "&:hover": { background: theme.palette.tertiary.back+60 } }}
+            sx={{ "&:hover": { background: theme.palette.tertiary.back + 60 } }}
           >
             <RowLeft>
               <IconBox
@@ -51,10 +51,13 @@ const DashboardTransHistory = ({ data }) => {
 const StyledComponent = styled(Box)`
   display: flex;
   width: 100%;
+  height: 490px;
   padding: 16px;
+  overflow: auto;
   flex-direction: column;
   box-sizing: border-box;
   border-radius: 24px;
+  margin-top: 24px;
 `;
 
 const TableRow = styled(Box)`
@@ -112,4 +115,4 @@ const TextTxn = styled(Box)`
   margin-left: 24px;
 `;
 
-export default DashboardTransHistory;
+export default TableDashboardTransHistory;

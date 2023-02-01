@@ -25,6 +25,12 @@ export const dataLink = [
     ],
   },
   {
+    name: "Accounts",
+    link: "accounts",
+    flagSubLink: false,
+    subLink: [],
+  },
+  {
     name: "Transactions",
     link: "transactions",
     flagSubLink: true,
