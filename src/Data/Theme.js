@@ -53,6 +53,24 @@ export const darkTheme = {
         shadow: "inset 0px 0px 32px rgba(23, 25, 41, 0.8)",
       },
     ],
+    dashBlocks: [
+      {
+        back: "radial-gradient(52.49% 101.94% at 95.02% 7%, rgba(234, 70, 148, 0.64) 0%, rgba(234, 70, 148, 0) 100%, rgba(30, 33, 52, 0.56)",
+        shadow: "inset 0px 0px 32px #171929",
+      },
+      {
+        back: "radial-gradient(76.41% 167.67% at -17.61% 20.33%, rgba(234, 70, 148, 0.64) 0%, rgba(234, 70, 148, 0) 100%, rgba(30, 33, 52, 0.56)",
+        shadow: "inset 0px 0px 32px #171929",
+      },
+      {
+        back: "radial-gradient(66.13% 107.33% at 89.7% 107.33%, rgba(234, 70, 148, 0.64) 0%, rgba(234, 70, 148, 0) 100%, rgba(30, 33, 52, 0.56)",
+        shadow: "inset 0px 0px 32px #171929",
+      },
+      {
+        back: " radial-gradient(68.44% 100% at 9.97% 100%, rgba(234, 70, 148, 0.64) 0%, rgba(234, 70, 148, 0) 100%, rgba(30, 33, 52, 0.56)",
+        shadow: "inset 0px 0px 32px #171929",
+      },
+    ],
   },
 };
 
@@ -107,6 +125,24 @@ export const lightTheme = {
         back: "radial-gradient(210.58% 100% at 50% 112.43%, rgba(234, 70, 148, 0.24) 0%, rgba(234, 70, 148, 0) 100%, rgba(30, 33, 52, 0.04)",
         border: "1px solid rgba(23, 25, 41, 0.16)",
         color: "#1E2134",
+        shadow: "inset 0px 0px 32px rgba(255, 255, 255, 0.8)",
+      },
+    ],
+    dashBlocks: [
+      {
+        back: "radial-gradient(210.58% 100% at 50% 112.43%, rgba(234, 70, 148, 0.24) 0%, rgba(234, 70, 148, 0) 100%, rgba(30, 33, 52, 0.04)",
+        shadow: "inset 0px 0px 32px rgba(255, 255, 255, 0.8)",
+      },
+      {
+        back: "radial-gradient(210.58% 100% at 50% 112.43%, rgba(234, 70, 148, 0.24) 0%, rgba(234, 70, 148, 0) 100%, rgba(30, 33, 52, 0.04)",
+        shadow: "inset 0px 0px 32px rgba(255, 255, 255, 0.8)",
+      },
+      {
+        back: "radial-gradient(210.58% 100% at 50% 112.43%, rgba(234, 70, 148, 0.24) 0%, rgba(234, 70, 148, 0) 100%, rgba(30, 33, 52, 0.04)",
+        shadow: "inset 0px 0px 32px rgba(255, 255, 255, 0.8)",
+      },
+      {
+        back: "radial-gradient(210.58% 100% at 50% 112.43%, rgba(234, 70, 148, 0.24) 0%, rgba(234, 70, 148, 0) 100%, rgba(30, 33, 52, 0.04)",
         shadow: "inset 0px 0px 32px rgba(255, 255, 255, 0.8)",
       },
     ],

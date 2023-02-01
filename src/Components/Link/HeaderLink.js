@@ -117,7 +117,7 @@ const SectionDropDown = styled(Box)`
   position: absolute;
   right: 0px;
   bottom: ${({ length }) => (length ? length * -25 - 32 - 10 + "px" : "")};
-  padding: 16px 30px 16px 16px;
+  padding: 16px 40px 16px 16px;
   width: max-content;
   backdrop-filter: blur(8px);
 

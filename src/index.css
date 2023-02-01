@@ -18,6 +18,21 @@ iframe {
   pointer-events: none;
 }
 
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(30, 33, 52, 0.08);
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1e2134;
+  border-radius: 100px;
+}
+
 @font-face {
   font-size: 40px;
   line-height: 100%;
@@ -77,6 +92,16 @@ iframe {
   font-size: 14px;
   line-height: 110%;
   letter-spacing: 1%;
+  line-height: 110%;
+  font-family: "Neue Plak";
+  font-style: "normal";
+  src: url("./Assets/Fonts/Neue_Plak/Neue\ Plak\ Extended\ Bold.ttf");
+}
+@font-face {
+  font-size: 14px;
+  line-height: 110%;
+  letter-spacing: 1%;
+  line-height: 100%;
   font-family: "Neue Plak";
   font-style: "normal";
   src: url("./Assets/Fonts/Neue_Plak/Neue\ Plak\ Extended\ SemiBold.ttf");
@@ -92,7 +117,7 @@ iframe {
 }
 
 @font-face {
-  font-family: 'Neue Plak';
+  font-family: "Neue Plak";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;

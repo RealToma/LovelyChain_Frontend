@@ -40,7 +40,7 @@ const Footer = () => {
               <TextHeader color={theme.palette.link.main}>
                 {each.name}
               </TextHeader>
-              {each.subLink.map((subLink, index) => {
+              {each.subLink.map((subLink) => {
                 return (
                   <Link
                     to={subLink.link}
@@ -48,10 +48,7 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     style={{ textDecoration: "none" }}
                   >
-                    <EachTextContactLink
-                      key={index}
-                      color={theme.palette.link.main + 48}
-                    >
+                    <EachTextContactLink color={theme.palette.link.main + 48}>
                       {subLink.name}
                     </EachTextContactLink>
                   </Link>

@@ -25,3 +25,30 @@ export const dataStatsDashboard = [
     value: "1.5k",
   },
 ];
+
+export const dataStatsDashboardBlocks = [
+  {
+    id: "753749",
+    flagMined: false,
+    timeTrans: 4,
+    validator: "0x68cFBEIDLALaldl239dkDL3E",
+  },
+  {
+    id: "753749",
+    flagMined: true,
+    timeTrans: 4,
+    validator: "0x68cFBEIDLALaldl239dkDL3E",
+  },
+  {
+    id: "753749",
+    flagMined: true,
+    timeTrans: 4,
+    validator: "0x68cFBEIDLALaldl239dkDL3E",
+  },
+  {
+    id: "753749",
+    flagMined: false,
+    timeTrans: 4,
+    validator: "0x68cFBEIDLALaldl239dkDL3E",
+  },
+];
