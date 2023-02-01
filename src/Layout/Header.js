@@ -14,27 +14,44 @@ const Header = ({ flagTheme, setFlagTheme }) => {
       <SectionLogoMark>
         <img src={imgLogoMark} width={"100%"} height={"100%"} alt="logoMark" />
       </SectionLogoMark>
-      <ButtonThemeSwitch
-        bgcolor={theme.palette.secondary.main + 56}
-        onClick={() => {
-          setFlagTheme(flagTheme === "dark" ? "light" : "dark");
-        }}
-      >
-        <FaMoon color={theme.palette.primary.main} fontSize={"1rem"} />
-      </ButtonThemeSwitch>
+      {flagTheme === "dark" ? (
+        <ButtonThemeSwitchDark
+          onClick={() => {
+            setFlagTheme(flagTheme === "dark" ? "light" : "dark");
+          }}
+        >
+          <FaMoon />
+        </ButtonThemeSwitchDark>
+      ) : (
+        <ButtonThemeSwitchLight
+          bgcolor={theme.palette.secondary.main + 56}
+          onClick={() => {
+            setFlagTheme(flagTheme === "dark" ? "light" : "dark");
+          }}
+        >
+          <IconLight></IconLight>
+        </ButtonThemeSwitchLight>
+      )}
+
       <SectionSearch>
-        <IconSearch color={theme.palette.secondary.text}>
+        <IconSearch color={flagTheme === "dark" ? "white" : "#171929"}>
           <BiSearch />
         </IconSearch>
         <InputSearch
           component={"input"}
           type={"text"}
           placeholder={"Search by address, txn hash..."}
+          color={flagTheme === "dark" ? "#ffffff48" : "#17192948"}
+          style={{
+            "::placeholder": `color:${
+              theme === "dark" ? "#ffffff48" : "#17192948"
+            }`,
+          }}
         />
       </SectionSearch>
       <LinkGroup>
         {dataLink.map((each, index) => {
-          return <HeaderLink data={each} key={index} />;
+          return <HeaderLink data={each} key={index} flagTheme={flagTheme} />;
         })}
       </LinkGroup>
     </StyledComponent>
@@ -57,7 +74,7 @@ const SectionLogoMark = styled(Box)`
   cursor: pointer;
 `;
 
-const ButtonThemeSwitch = styled(Box)`
+const ButtonThemeSwitchDark = styled(Box)`
   display: flex;
   width: 54px;
   height: 30px;
@@ -70,7 +87,36 @@ const ButtonThemeSwitch = styled(Box)`
   align-items: center;
   padding: 0px 6px;
   box-sizing: border-box;
+  color: #ea4694;
+  font-size: 1.1rem;
   cursor: pointer;
+`;
+
+const ButtonThemeSwitchLight = styled(Box)`
+  display: flex;
+  width: 54px;
+  height: 30px;
+  background: rgba(30, 33, 52, 0.04);
+  border: 1px solid rgba(23, 25, 41, 0.16);
+  /* Light mode */
+
+  box-shadow: inset 0px 0px 32px rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 100px;
+  align-items: center;
+  padding: 0px 6px;
+  box-sizing: border-box;
+  justify-content: flex-end;
+  cursor: pointer;
+`;
+
+const IconLight = styled(Box)`
+  width: 19px;
+  height: 19px;
+  border-radius: 100%;
+  background: #ea4694;
 `;
 
 const SectionSearch = styled(Box)`
@@ -99,7 +145,6 @@ const InputSearch = styled(Box)`
   /* identical to box height, or 16px */
 
   letter-spacing: 0.01em;
-  color: #ffffff40;
 
   ::placeholder {
     font-family: "Neue Plak";
@@ -110,7 +155,6 @@ const InputSearch = styled(Box)`
     /* identical to box height, or 16px */
 
     letter-spacing: 0.01em;
-    color: #ffffff48;
   }
 
   ::-webkit-input-placeholder {
@@ -123,7 +167,6 @@ const InputSearch = styled(Box)`
     /* identical to box height, or 16px */
 
     letter-spacing: 0.01em;
-    color: #ffffff48;
   }
 
   :-ms-input-placeholder {
@@ -136,7 +179,6 @@ const InputSearch = styled(Box)`
     /* identical to box height, or 16px */
 
     letter-spacing: 0.01em;
-    color: #ffffff48;
   }
 `;
 
