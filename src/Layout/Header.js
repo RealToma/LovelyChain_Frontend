@@ -6,12 +6,19 @@ import { FaMoon } from "react-icons/fa";
 import { BiSearch } from "react-icons/bi";
 import { dataLink } from "../Data/Link";
 import HeaderLink from "../Components/Link/HeaderLink";
+import { useNavigate } from "react-router-dom";
 
 const Header = ({ flagTheme, setFlagTheme }) => {
+  const navigate = useNavigate();
   const theme = useTheme();
   return (
     <StyledComponent>
-      <SectionLogoMark>
+      <SectionLogoMark
+        onClick={() => {
+          navigate("/");
+          window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+        }}
+      >
         <img src={imgLogoMark} width={"100%"} height={"100%"} alt="logoMark" />
       </SectionLogoMark>
       {flagTheme === "dark" ? (

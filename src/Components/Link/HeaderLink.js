@@ -3,15 +3,18 @@ import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { useNavigate, Link } from "react-router-dom";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { useOutsideDetector } from "../../Hooks/useOutsideDetector";
 
 const HeaderLink = ({ data, flagTheme }) => {
   const navigate = useNavigate();
-  const [flagClickDropDown, setFlagClickDropDown] = useState(false);
   const theme = useTheme();
+  const [flagClickDropDown, setFlagClickDropDown] = useState(false);
+  const refDropDown = useRef(0);
+  useOutsideDetector([refDropDown], () => setFlagClickDropDown(false));
 
   return (
-    <StyledComponent>
+    <StyledComponent ref={refDropDown}>
       {data.flagSubLink ? (
         <LinkMainText
           color={theme.palette.link.main}
@@ -70,6 +73,7 @@ const HeaderLink = ({ data, flagTheme }) => {
 const StyledComponent = styled(Box)`
   display: flex;
   align-items: center;
+  user-select: none;
 `;
 
 const LinkMainText = styled(Box)`
