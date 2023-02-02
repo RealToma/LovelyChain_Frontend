@@ -89,6 +89,15 @@ iframe {
 }
 
 @font-face {
+  font-family: "Neue Plak";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 110%;
+  src: url("./Assets/Fonts/Neue_Plak/Neue\ Plak\ Regular.ttf");
+}
+
+@font-face {
   font-size: 14px;
   line-height: 110%;
   letter-spacing: 1%;
@@ -116,7 +125,6 @@ iframe {
   line-height: 140%;
   src: url("./Assets/Fonts/Neue_Plak/Neue\ Plak\ Regular.ttf");
 }
-
 
 @font-face {
   font-size: 12px;

@@ -38,18 +38,22 @@ export const dataTableAddresses = {
     {
       text: "",
       flexWidth: 0.2,
+      flagIconSort: false,
     },
     {
       text: "Address",
       flexWidth: 1.5,
+      flagIconSort: false,
     },
     {
       text: "Balance",
       flexWidth: 1,
+      flagIconSort: true,
     },
     {
       text: "Txn Count",
       flexWidth: 1,
+      flagIconSort: true,
     },
   ],
   body: [
@@ -87,6 +91,108 @@ export const dataTableAddresses = {
       address: "0xFC1b2f6bD1B2A21DKeD2eAAc9",
       balance: 37,
       txnCount: 0,
+    },
+  ],
+};
+
+export const dataTableBlocks = {
+  head: [
+    {
+      flexWidth: 1,
+    },
+    {
+      flexWidth: 0.8,
+    },
+    {
+      flexWidth: 1,
+    },
+    {
+      flexWidth: 0.8,
+    },
+    {
+      flexWidth: 1,
+    },
+    {
+      flexWidth: 1.3,
+    },
+  ],
+  body: [
+    {
+      id: "#1039690",
+      time: 12,
+      transCount: 196,
+      sizeByte: 585,
+      validator: "0xFC1b2f6bD1B2A21DKeD2eAAc9",
+      progress: {
+        percent: 68,
+        gasLimit: 8000000,
+      },
+    },
+    {
+      id: "#1039690",
+      time: 12,
+      transCount: 196,
+      size: 585,
+      validator: "0xFC1b2f6bD1B2A21DKeD2eAAc9",
+      progress: {
+        percent: 68,
+        gasLimit: 8000000,
+      },
+    },
+    {
+      id: "#1039690",
+      time: 12,
+      transCount: 196,
+      size: 585,
+      validator: "0xFC1b2f6bD1B2A21DKeD2eAAc9",
+      progress: {
+        percent: 68,
+        gasLimit: 8000000,
+      },
+    },
+    {
+      id: "#1039690",
+      time: 12,
+      transCount: 196,
+      size: 585,
+      validator: "0xFC1b2f6bD1B2A21DKeD2eAAc9",
+      progress: {
+        percent: 68,
+        gasLimit: 8000000,
+      },
+    },
+    {
+      id: "#1039690",
+      time: 12,
+      transCount: 196,
+      size: 585,
+      validator: "0xFC1b2f6bD1B2A21DKeD2eAAc9",
+      progress: {
+        percent: 68,
+        gasLimit: 8000000,
+      },
+    },
+    {
+      id: "#1039690",
+      time: 12,
+      transCount: 196,
+      size: 585,
+      validator: "0xFC1b2f6bD1B2A21DKeD2eAAc9",
+      progress: {
+        percent: 68,
+        gasLimit: 8000000,
+      },
+    },
+    {
+      id: "#1039690",
+      time: 12,
+      transCount: 196,
+      size: 585,
+      validator: "0xFC1b2f6bD1B2A21DKeD2eAAc9",
+      progress: {
+        percent: 68,
+        gasLimit: 8000000,
+      },
     },
   ],
 };

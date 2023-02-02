@@ -7,6 +7,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import { lightTheme, darkTheme } from "./Data/Theme";
 import Dashboard from "./Pages/Dashboard";
 import Accounts from "./Pages/Accounts";
+import Blocks from "./Pages/Blocks/Blocks";
 
 const App = () => {
   const [flagTheme, setFlagTheme] = useState("dark");
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="/" element={<Dashboard />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/accounts" element={<Accounts />} />
+            <Route path="/blocks" element={<Blocks />} />
           </Routes>
           <Footer />
         </Layout>

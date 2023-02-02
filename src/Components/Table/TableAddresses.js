@@ -1,9 +1,12 @@
 import styled from "styled-components";
 import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+import { BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
+import { useState } from "react";
 
 const TableAddresses = ({ data }) => {
   const theme = useTheme();
+  const [flagSortClick, setFlagSortClick] = useState(false);
 
   return (
     <StyledComponent
@@ -27,7 +30,25 @@ const TableAddresses = ({ data }) => {
                 }
                 color={theme.palette.link.main + 48}
               >
-                {each.text}
+                <Box display="flex" alignSelf={"center"}>
+                  {each.text}
+                </Box>
+                {!each.flagIconSort ? (
+                  <></>
+                ) : (
+                  <IconSort
+                    color={theme.palette.link.main}
+                    onClick={() => {
+                      setFlagSortClick(!flagSortClick);
+                    }}
+                  >
+                    {!flagSortClick ? (
+                      <BsChevronDoubleDown />
+                    ) : (
+                      <BsChevronDoubleUp />
+                    )}
+                  </IconSort>
+                )}
               </SectionHeadCell>
             );
           })}
@@ -39,7 +60,7 @@ const TableAddresses = ({ data }) => {
             <TableRow
               key={index}
               sx={{
-                "&:hover": { background: theme.palette.tertiary.back +80 },
+                "&:hover": { background: theme.palette.tertiary.back + 80 },
               }}
             >
               <SectionNumber flex={data.head[0].flexWidth}>
@@ -80,6 +101,7 @@ const TableAddresses = ({ data }) => {
               <TextTransSent
                 flex={data.head[3].flexWidth}
                 color={theme.palette.link.main}
+                justifyContent="flex-end"
               >
                 {each.txnCount}
                 {"\u00a0"}Transactions sent
@@ -126,6 +148,17 @@ const SectionHeadCell = styled(Box)`
   /* identical to box height, or 18px */
 
   letter-spacing: 0.02em;
+`;
+
+const IconSort = styled(Box)`
+  font-size: 0.8rem;
+  margin-left: 10px;
+  user-select: none;
+  transition: 0.3s;
+  &:hover {
+    color: #ea4694;
+  }
+  cursor: pointer;
 `;
 
 const TableBody = styled(Box)`
