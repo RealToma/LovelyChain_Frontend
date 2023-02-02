@@ -8,6 +8,7 @@ import { lightTheme, darkTheme } from "./Data/Theme";
 import Dashboard from "./Pages/Dashboard";
 import Accounts from "./Pages/Accounts";
 import Blocks from "./Pages/Blocks/Blocks";
+import BlockDetails from "./Pages/Blocks/BlockDetails";
 
 const App = () => {
   const [flagTheme, setFlagTheme] = useState("dark");
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/accounts" element={<Accounts />} />
             <Route path="/blocks" element={<Blocks />} />
+            <Route path="/blockdetails" element={<BlockDetails />} />
           </Routes>
           <Footer />
         </Layout>

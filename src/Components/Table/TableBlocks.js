@@ -4,8 +4,10 @@ import { useTheme } from "@mui/material/styles";
 import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";
+import { useNavigate } from "react-router-dom";
 
 const TableBlocks = ({ data }) => {
+  const navigate = useNavigate();
   const theme = useTheme();
 
   return (
@@ -23,6 +25,15 @@ const TableBlocks = ({ data }) => {
               key={index}
               sx={{
                 "&:hover": { background: theme.palette.tertiary.back + 80 },
+              }}
+              onClick={() => {
+                navigate("/blockdetails", {
+                  state: {
+                    index: index,
+                    data: data.body,
+                  },
+                });
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
               }}
             >
               <TextId flex={data.head[0].flexWidth}>{each.id}</TextId>
@@ -61,7 +72,7 @@ const TableBlocks = ({ data }) => {
                 <SectionTextProgreess>
                   <TextPercent>{each.progress.percent}%</TextPercent>
                   <TextGasLimit color={theme.palette.link.main}>
-                    {each.progress.gasLimit}
+                    {each.progress.gasLimit.toLocaleString("en-US")}
                     {"\u00a0"}Gas Limit
                   </TextGasLimit>
                 </SectionTextProgreess>
@@ -221,7 +232,7 @@ const BorderLinearProgress = styled(LinearProgress)({
   left: 0,
   [`&.${linearProgressClasses.colorPrimary}`]: {
     height: 8,
-    width: '100%',
+    width: "100%",
     backgroundColor: "rgba(234, 70, 148, 0.24)",
   },
   [`& .${linearProgressClasses.bar}`]: {
