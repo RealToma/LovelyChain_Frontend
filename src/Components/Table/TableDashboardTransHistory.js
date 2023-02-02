@@ -58,14 +58,16 @@ const StyledComponent = styled(Box)`
   box-sizing: border-box;
   border-radius: 24px;
   margin-top: 24px;
+  justify-content: center;
 `;
 
 const TableRow = styled(Box)`
   display: flex;
   width: 100%;
+  height: 80px;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 24px;
+  padding: 0px 24px;
   box-sizing: border-box;
   cursor: pointer;
   transition: 0.5s;

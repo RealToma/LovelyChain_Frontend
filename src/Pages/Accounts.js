@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+import TableAddresses from "../Components/Table/TableAddresses";
+import { dataTableAddresses } from "../Data/Table";
 
 const Accounts = () => {
   const theme = useTheme();
@@ -8,6 +10,7 @@ const Accounts = () => {
   return (
     <StyledComponent>
       <TextSubject color={theme.palette.link.main}>Addresses</TextSubject>
+      <TableAddresses data={dataTableAddresses} />
     </StyledComponent>
   );
 };

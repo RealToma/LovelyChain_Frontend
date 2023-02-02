@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
     <StyledComponent bgcolor={theme.palette.secondary.main}>
       <MaxComponet>{children}</MaxComponet>
       <ImgBack>
-        <img src={imgMainBackDark} alt="imgBack" />
+        <img src={imgMainBackDark} height={'100%'} alt="imgBack" />
       </ImgBack>
     </StyledComponent>
   );
@@ -46,6 +46,7 @@ const MaxComponet = styled(Box)`
 const ImgBack = styled(Box)`
   display: flex;
   position: absolute;
+  height: 1000px;
   top: 0px;
   right: 0px;
   z-index: 0;
