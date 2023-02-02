@@ -1,4 +1,5 @@
 import imgWalletWhite from "../Assets/Images/Icon/walletWhite.png";
+import imgBitcoin from "../Assets/Images/Icon/bitcoin01.png";
 
 export const dataDashboardTransHistory = [
   {
@@ -94,19 +95,6 @@ export const dataBlockDetailsTrans = [
     from: "0x68cFB416d3caDA123199a1075d3E",
     to: "0x781cnD781cnD78ds1cnD781cnD51",
   },
-  {
-    icon: imgWalletWhite,
-    txn: "a1075db55d416d3ca199a1075db55d416d3ca199",
-    from: "0x68cFB416d3caDA123199a1075d3E",
-    to: "0x781cnD781cnD78ds1cnD781cnD51",
-  },
-  {
-    icon: imgWalletWhite,
-    txn: "a1075db55d416d3ca199a1075db55d416d3ca199",
-    from: "0x68cFB416d3caDA123199a1075d3E",
-    to: "0x781cnD781cnD78ds1cnD781cnD51",
-  },
-
 ];
 
 export const dataTableAddresses = {
@@ -360,6 +348,103 @@ export const dataTableBlocks = {
         "384,774,286,395,851,167,561,210,837,353,471,904,546,121,584",
       nonce: "0x0000000000000000",
       reward: 135.0,
+    },
+  ],
+};
+
+export const dataTableTokens = {
+  head: [
+    {
+      text: "Token",
+      flexWidth: 1,
+      flagIconSort: false,
+    },
+    {
+      text: "Address",
+      flexWidth: 1.2,
+      flagIconSort: false,
+    },
+    {
+      text: "Total Supply",
+      flexWidth: 1,
+      flagIconSort: true,
+    },
+    {
+      text: "Holders Count",
+      flexWidth: 0.6,
+      flagIconSort: true,
+    },
+  ],
+  body: [
+    {
+      token: {
+        icon: imgBitcoin,
+        name: "Bitcoin",
+        symbol: "BTC",
+      },
+      address: "0xFC1b2f6bD1B2A21DKeD2eAAc9",
+      totalSupply: 19000000,
+      holdersCount: 1598763,
+    },
+    {
+      token: {
+        icon: imgBitcoin,
+        name: "Bitcoin",
+        symbol: "BTC",
+      },
+      address: "0xFC1b2f6bD1B2A21DKeD2eAAc9",
+      totalSupply: 19000000,
+      holdersCount: 1598763,
+    },
+    {
+      token: {
+        icon: imgBitcoin,
+        name: "Bitcoin",
+        symbol: "BTC",
+      },
+      address: "0xFC1b2f6bD1B2A21DKeD2eAAc9",
+      totalSupply: 19000000,
+      holdersCount: 1598763,
+    },
+    {
+      token: {
+        icon: imgBitcoin,
+        name: "Bitcoin",
+        symbol: "BTC",
+      },
+      address: "0xFC1b2f6bD1B2A21DKeD2eAAc9",
+      totalSupply: 19000000,
+      holdersCount: 1598763,
+    },
+    {
+      token: {
+        icon: imgBitcoin,
+        name: "Bitcoin",
+        symbol: "BTC",
+      },
+      address: "0xFC1b2f6bD1B2A21DKeD2eAAc9",
+      totalSupply: 19000000,
+      holdersCount: 1598763,
+    },
+    {
+      token: {
+        icon: imgBitcoin,
+        name: "Bitcoin",
+        symbol: "BTC",
+      },
+      address: "0xFC1b2f6bD1B2A21DKeD2eAAc9",
+      totalSupply: 19000000,
+      holdersCount: 1598763,
+    },
+    {
+      token: {
+        icon: imgBitcoin,
+        name: "Bitcoin",
+        symbol: "BTC",
+      },
+      address: "0xFC1b2f6bD1B2A21DKeD2eAAc9",
+      totalSupply: 19000000,
+      holdersCount: 1598763,
     },
   ],
 };

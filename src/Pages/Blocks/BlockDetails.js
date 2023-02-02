@@ -9,7 +9,7 @@ import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import { BsQuestion } from "react-icons/bs";
 import { TbBoxMultiple } from "react-icons/tb";
-import TableDashboardTransHistory from "../../Components/Table/TableDashboardTransHistory";
+import TableBlockDetailTransactions from "../../Components/Table/TableBlockDetailTransactions";
 import { dataBlockDetailsTrans } from "../../Data/Table";
 
 const BlockDetails = () => {
@@ -295,7 +295,7 @@ const BlockDetails = () => {
       </SectionDetails>
       <SectionTransactions>
         <TextSubject color={theme.palette.link.main}>Transactions</TextSubject>
-        <TableDashboardTransHistory data={dataBlockDetailsTrans} />
+        <TableBlockDetailTransactions data={dataBlockDetailsTrans} height={'100%'} />
       </SectionTransactions>
     </StyledComponent>
   );

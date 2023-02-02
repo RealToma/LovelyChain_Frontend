@@ -88,7 +88,10 @@ const Dashboard = () => {
             </SectionViewAll>
           </SectoinTextHeadTransHistory>
           <SectionTableTransHistory>
-            <TableDashboardTransHistory data={dataDashboardTransHistory} />
+            <TableDashboardTransHistory
+              data={dataDashboardTransHistory}
+              height={"490px"}
+            />
           </SectionTableTransHistory>
         </SectionTransHistory>
         <SectionPremium

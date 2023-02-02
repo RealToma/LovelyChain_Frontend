@@ -9,6 +9,8 @@ import Dashboard from "./Pages/Dashboard";
 import Accounts from "./Pages/Accounts";
 import Blocks from "./Pages/Blocks/Blocks";
 import BlockDetails from "./Pages/Blocks/BlockDetails";
+import Reorgs from "./Pages/Reorgs";
+import Tokens from "./Pages/Tokens";
 
 const App = () => {
   const [flagTheme, setFlagTheme] = useState("dark");
@@ -24,6 +26,8 @@ const App = () => {
             <Route path="/accounts" element={<Accounts />} />
             <Route path="/blocks" element={<Blocks />} />
             <Route path="/blockdetails" element={<BlockDetails />} />
+            <Route path="/reorgs" element={<Reorgs />} />
+            <Route path="/tokens" element={<Tokens />} />
           </Routes>
           <Footer />
         </Layout>
