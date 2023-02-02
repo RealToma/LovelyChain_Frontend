@@ -7,6 +7,8 @@ import {
 } from "react-icons/md";
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
+import { BsQuestion } from "react-icons/bs";
+import { TbBoxMultiple } from "react-icons/tb";
 
 const BlockDetails = () => {
   const theme = useTheme();
@@ -63,6 +65,230 @@ const BlockDetails = () => {
               <MdOutlineKeyboardArrowRight onClick={() => hanldeRightBlock()} />
             </IconArrowButton>
           </SectionHead>
+          <SectionDetailBody>
+            <EachDetail>
+              <TextEachHead color={theme.palette.link.main + 48}>
+                <Box display={"flex"}>Block Height</Box>
+                <IconQuestion
+                  border={`1px solid ${theme.palette.link.main + 16}`}
+                  color={theme.palette.link.main}
+                >
+                  <BsQuestion />
+                </IconQuestion>
+              </TextEachHead>
+              <TextEachContent color={theme.palette.link.main}>
+                {state.data[indexBlock].height}
+              </TextEachContent>
+            </EachDetail>
+            <EachDetail>
+              <TextEachHead color={theme.palette.link.main + 48}>
+                <Box display={"flex"}>Timestamp</Box>
+                <IconQuestion
+                  border={`1px solid ${theme.palette.link.main + 16}`}
+                  color={theme.palette.link.main}
+                >
+                  <BsQuestion />
+                </IconQuestion>
+              </TextEachHead>
+              <TextEachContent color={theme.palette.link.main}>
+                {state.data[indexBlock].timestamp}
+              </TextEachContent>
+            </EachDetail>
+            <EachDetail>
+              <TextEachHead color={theme.palette.link.main + 48}>
+                <Box display={"flex"}>Transactions</Box>
+                <IconQuestion
+                  border={`1px solid ${theme.palette.link.main + 16}`}
+                  color={theme.palette.link.main}
+                >
+                  <BsQuestion />
+                </IconQuestion>
+              </TextEachHead>
+              <ButtonTransactions>2 Transactions</ButtonTransactions>
+            </EachDetail>
+            <EachDetail>
+              <TextEachHead color={theme.palette.link.main + 48}>
+                <Box display={"flex"}>Validator</Box>
+                <IconQuestion
+                  border={`1px solid ${theme.palette.link.main + 16}`}
+                  color={theme.palette.link.main}
+                >
+                  <BsQuestion />
+                </IconQuestion>
+              </TextEachHead>
+              <TextEachContent color={theme.palette.link.main}>
+                <Box display={"flex"}>
+                  {state.data[indexBlock].validator.slice(0, 10) +
+                    "..." +
+                    state.data[indexBlock].validator.slice(-2)}
+                </Box>
+                <IconExplore color={theme.palette.link.main}>
+                  <TbBoxMultiple />
+                </IconExplore>
+                <IconExplore color={theme.palette.link.main}></IconExplore>
+              </TextEachContent>
+            </EachDetail>
+            <EachDetail>
+              <TextEachHead color={theme.palette.link.main + 48}>
+                <Box display={"flex"}>Size</Box>
+                <IconQuestion
+                  border={`1px solid ${theme.palette.link.main + 16}`}
+                  color={theme.palette.link.main}
+                >
+                  <BsQuestion />
+                </IconQuestion>
+              </TextEachHead>
+              <TextEachContent color={theme.palette.link.main}>
+                {state.data[indexBlock].sizeByte} bytes
+              </TextEachContent>
+            </EachDetail>
+            <EachDetail01>
+              <EachDetail mr={"30px"}>
+                <TextEachHead color={theme.palette.link.main + 48}>
+                  <Box display={"flex"}>Hash</Box>
+                  <IconQuestion
+                    border={`1px solid ${theme.palette.link.main + 16}`}
+                    color={theme.palette.link.main}
+                  >
+                    <BsQuestion />
+                  </IconQuestion>
+                </TextEachHead>
+                <TextEachContent color={theme.palette.link.main}>
+                  <Box display={"flex"}>
+                    {state.data[indexBlock].hash.slice(0, 6) +
+                      "..." +
+                      state.data[indexBlock].hash.slice(-2)}
+                  </Box>
+                  <IconExplore color={theme.palette.link.main}>
+                    <TbBoxMultiple />
+                  </IconExplore>
+                  <IconExplore color={theme.palette.link.main}></IconExplore>
+                </TextEachContent>
+              </EachDetail>
+              <EachDetail>
+                <TextEachHead color={theme.palette.link.main + 48}>
+                  <Box display={"flex"}>Parent Hash</Box>
+                  <IconQuestion
+                    border={`1px solid ${theme.palette.link.main + 16}`}
+                    color={theme.palette.link.main}
+                  >
+                    <BsQuestion />
+                  </IconQuestion>
+                </TextEachHead>
+                <TextEachContent color={theme.palette.link.main}>
+                  <Box display={"flex"}>
+                    {state.data[indexBlock].hashParent.slice(0, 6) +
+                      "..." +
+                      state.data[indexBlock].hashParent.slice(-2)}
+                  </Box>
+                  <IconExplore color={theme.palette.link.main}>
+                    <TbBoxMultiple />
+                  </IconExplore>
+                  <IconExplore color={theme.palette.link.main}></IconExplore>
+                </TextEachContent>
+              </EachDetail>
+            </EachDetail01>
+            <EachDetail>
+              <TextEachHead color={theme.palette.link.main + 48}>
+                <Box display={"flex"}>Difficulty</Box>
+                <IconQuestion
+                  border={`1px solid ${theme.palette.link.main + 16}`}
+                  color={theme.palette.link.main}
+                >
+                  <BsQuestion />
+                </IconQuestion>
+              </TextEachHead>
+              <TextEachContent color={theme.palette.link.main}>
+                {state.data[indexBlock].difficulty}
+              </TextEachContent>
+            </EachDetail>
+            <EachDetail>
+              <TextEachHead color={theme.palette.link.main + 48}>
+                <Box display={"flex"}>Total Difficulty</Box>
+                <IconQuestion
+                  border={`1px solid ${theme.palette.link.main + 16}`}
+                  color={theme.palette.link.main}
+                >
+                  <BsQuestion />
+                </IconQuestion>
+              </TextEachHead>
+              <TextEachContent color={theme.palette.link.main}>
+                {state.data[indexBlock].difficultyTotal}
+              </TextEachContent>
+            </EachDetail>
+            <EachDetail01>
+              <EachDetail mr={"30px"}>
+                <TextEachHead color={theme.palette.link.main + 48}>
+                  <Box display={"flex"}>Gas Used</Box>
+                  <IconQuestion
+                    border={`1px solid ${theme.palette.link.main + 16}`}
+                    color={theme.palette.link.main}
+                  >
+                    <BsQuestion />
+                  </IconQuestion>
+                </TextEachHead>
+                <TextEachContent color={theme.palette.link.main}>
+                  {state.data[indexBlock].progress.gasUsed.toLocaleString(
+                    "en-US"
+                  )}{" "}
+                  |{" "}
+                  {(
+                    state.data[indexBlock].progress.gasLimit /
+                    state.data[indexBlock].progress.gasUsed
+                  ).toFixed(2)}
+                  %
+                </TextEachContent>
+              </EachDetail>
+              <EachDetail>
+                <TextEachHead color={theme.palette.link.main + 48}>
+                  <Box display={"flex"}>Gas Limit</Box>
+                  <IconQuestion
+                    border={`1px solid ${theme.palette.link.main + 16}`}
+                    color={theme.palette.link.main}
+                  >
+                    <BsQuestion />
+                  </IconQuestion>
+                </TextEachHead>
+                <TextEachContent color={theme.palette.link.main}>
+                  {state.data[indexBlock].progress.gasLimit.toLocaleString(
+                    "en-US"
+                  )}
+
+                  <IconExplore color={theme.palette.link.main}></IconExplore>
+                </TextEachContent>
+              </EachDetail>
+            </EachDetail01>
+            <EachDetail>
+              <TextEachHead color={theme.palette.link.main + 48}>
+                <Box display={"flex"}>Nonce</Box>
+                <IconQuestion
+                  border={`1px solid ${theme.palette.link.main + 16}`}
+                  color={theme.palette.link.main}
+                >
+                  <BsQuestion />
+                </IconQuestion>
+              </TextEachHead>
+              <TextEachContent color={theme.palette.link.main}>
+                {state.data[indexBlock].nonce}
+              </TextEachContent>
+            </EachDetail>
+          </SectionDetailBody>
+          <SectionReward
+            borderTop={theme.palette.dashboard.tableTransHistory.border}
+          >
+            <TextEachHead color={theme.palette.link.main + 48}>
+              <Box display={"flex"}>Validator Reward</Box>
+              <IconQuestion
+                border={`1px solid ${theme.palette.link.main + 16}`}
+                color={theme.palette.link.main}
+              >
+                <BsQuestion />
+              </IconQuestion>
+            </TextEachHead>
+            <TextValidatorReward>
+              {state.data[indexBlock].reward} Lovely
+            </TextValidatorReward>
+          </SectionReward>
         </SectionEachDetails>
       </SectionDetails>
       <SectionTransactions></SectionTransactions>
@@ -151,6 +377,145 @@ const TextBlockId = styled(Box)`
 
   letter-spacing: 0.01em;
   margin: 0px 16px;
+`;
+
+const SectionDetailBody = styled(Box)`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 32px;
+  box-sizing: border-box;
+`;
+
+const EachDetail = styled(Box)`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: 24px;
+`;
+
+const EachDetail01 = styled(Box)`
+  display: flex;
+  width: 100%;
+  width: 100%;
+  align-items: center;
+`;
+
+const TextEachHead = styled(Box)`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  font-family: "Neue Plak";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 110%;
+  /* or 15px */
+
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+`;
+
+const TextEachContent = styled(Box)`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  font-family: "Neue Plak";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 110%;
+  /* identical to box height, or 18px */
+
+  text-align: start;
+  letter-spacing: 0.02em;
+  word-break: break-all;
+`;
+
+const IconQuestion = styled(Box)`
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  font-size: 1.3rem;
+  margin-left: 6px;
+
+  transition: 0.3s;
+  user-select: none;
+  cursor: pointer;
+  &:hover {
+    color: #ea4694;
+  }
+`;
+
+const IconExplore = styled(Box)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  font-size: 1.3rem;
+  margin-left: 6px;
+
+  transition: 0.3s;
+  user-select: none;
+  cursor: pointer;
+  &:hover {
+    color: #ea4694;
+  }
+`;
+
+const ButtonTransactions = styled(Box)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 38px;
+  border: 1px solid #ea4694;
+  border-radius: 12px;
+
+  font-family: "Neue Plak";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  /* identical to box height, or 16px */
+
+  letter-spacing: 0.02em;
+
+  color: #ea4694;
+
+  transition: 0.3s;
+  user-select: none;
+  cursor: pointer;
+  &:hover {
+  }
+`;
+
+const SectionReward = styled(Box)`
+  display: flex;
+  width: 100%;
+  height: 95px;
+  flex-direction: column;
+  padding: 0px 32px;
+  box-sizing: border-box;
+  justify-content: center;
+`;
+
+const TextValidatorReward = styled(Box)`
+  font-family: "Neue Plak";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  /* identical to box height, or 36px */
+
+  letter-spacing: 0.02em;
+
+  color: #ea4694;
 `;
 
 export default BlockDetails;
