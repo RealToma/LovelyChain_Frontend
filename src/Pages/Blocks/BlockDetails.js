@@ -9,6 +9,8 @@ import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import { BsQuestion } from "react-icons/bs";
 import { TbBoxMultiple } from "react-icons/tb";
+import TableDashboardTransHistory from "../../Components/Table/TableDashboardTransHistory";
+import { dataBlockDetailsTrans } from "../../Data/Table";
 
 const BlockDetails = () => {
   const theme = useTheme();
@@ -291,7 +293,10 @@ const BlockDetails = () => {
           </SectionReward>
         </SectionEachDetails>
       </SectionDetails>
-      <SectionTransactions></SectionTransactions>
+      <SectionTransactions>
+        <TextSubject color={theme.palette.link.main}>Transactions</TextSubject>
+        <TableDashboardTransHistory data={dataBlockDetailsTrans} />
+      </SectionTransactions>
     </StyledComponent>
   );
 };
@@ -307,11 +312,13 @@ const SectionDetails = styled(Box)`
   display: flex;
   width: 400px;
   flex-direction: column;
+  margin-right: 32px;
 `;
 
 const SectionTransactions = styled(Box)`
   display: flex;
   flex: 1;
+  flex-direction: column;
   width: 100%;
 `;
 

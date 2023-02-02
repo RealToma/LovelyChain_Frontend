@@ -9,7 +9,7 @@ const TableDashboardTransHistory = ({ data }) => {
   return (
     <StyledComponent
       style={{
-        backgroundImage: theme.palette.dashboard.tableTransHistory.background,
+        backgroundImage: theme.palette.table.back01,
       }}
       border={theme.palette.dashboard.tableTransHistory.border}
       boxShadow={theme.palette.dashboard.tableTransHistory.boxShadow}
@@ -51,7 +51,6 @@ const TableDashboardTransHistory = ({ data }) => {
 const StyledComponent = styled(Box)`
   display: flex;
   width: 100%;
-  height: 490px;
   padding: 16px;
   overflow: auto;
   flex-direction: column;
