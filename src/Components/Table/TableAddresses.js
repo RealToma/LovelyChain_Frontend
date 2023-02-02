@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import { MdOutlineAccountBalanceWallet } from "react-icons/md";
 
 const TableAddresses = ({ data }) => {
   const theme = useTheme();
@@ -40,7 +39,7 @@ const TableAddresses = ({ data }) => {
             <TableRow
               key={index}
               sx={{
-                "&:hover": { background: theme.palette.tertiary.back + 60 },
+                "&:hover": { background: theme.palette.tertiary.back +80 },
               }}
             >
               <SectionNumber flex={data.head[0].flexWidth}>
@@ -63,7 +62,8 @@ const TableAddresses = ({ data }) => {
                 <TextBigBalance color={theme.palette.link.main}>
                   7.5
                 </TextBigBalance>
-                {"\u00a0"}{"\u00a0"}
+                {"\u00a0"}
+                {"\u00a0"}
                 <TextSmallBalance color={theme.palette.link.main}>
                   E
                 </TextSmallBalance>
@@ -71,7 +71,8 @@ const TableAddresses = ({ data }) => {
                 <TextBigBalance color={theme.palette.link.main}>
                   {each.balance}
                 </TextBigBalance>
-                {"\u00a0"}{"\u00a0"}
+                {"\u00a0"}
+                {"\u00a0"}
                 <TextSmallBalance color={theme.palette.link.main}>
                   Lovely
                 </TextSmallBalance>
@@ -87,36 +88,6 @@ const TableAddresses = ({ data }) => {
           );
         })}
       </TableBody>
-      {/* {data.map((each, index) => {
-        return (
-          <TableRow
-            key={index}
-            sx={{ "&:hover": { background: theme.palette.tertiary.back + 60 } }}
-          >
-            <RowLeft>
-              <IconBox
-                bgcolor={theme.palette.tertiary.back + 24}
-                border={`1px solid ${theme.palette.link.main + "08"}`}
-                color={theme.palette.link.main}
-              >
-                <MdOutlineAccountBalanceWallet />
-              </IconBox>
-              <TextTxn color={theme.palette.link.main}>
-                {each.txn.slice(0, 20) + "..."}
-              </TextTxn>
-            </RowLeft>
-            <RowRight color={theme.palette.link.main}>
-              {each.from.slice(0, 6) + "..." + each.from.slice(-2)}
-              {"\u00a0"}
-              {"\u00a0"}
-              <span style={{ color: `${theme.palette.link.main}48` }}>to</span>
-              {"\u00a0"}
-              {"\u00a0"}
-              {each.to.slice(0, 6) + "..." + each.to.slice(-2)}
-            </RowRight>
-          </TableRow>
-        );
-      })} */}
     </StyledComponent>
   );
 };
@@ -179,24 +150,6 @@ const TableRow = styled(Box)`
   /* &:hover {
     background: rgba(23, 25, 41, 0.48);
   } */
-`;
-
-const RowLeft = styled(Box)`
-  display: flex;
-  align-items: center;
-`;
-
-const RowRight = styled(Box)`
-  display: flex;
-  align-items: center;
-  font-family: "Neue Plak";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 110%;
-  /* identical to box height, or 22px */
-
-  letter-spacing: 0.02em;
 `;
 
 const IconBox = styled(Box)`

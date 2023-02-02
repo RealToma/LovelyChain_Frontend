@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { useRef, useState } from "react";
 import { useOutsideDetector } from "../../Hooks/useOutsideDetector";

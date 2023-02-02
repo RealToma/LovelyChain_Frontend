@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import imgMainBackDark from "../Assets/Images/Background/mainBack_Dark.png";
-import imgMainBackLight from "../Assets/Images/Background/mainBack_Light.png";
+// import imgMainBackLight from "../Assets/Images/Background/mainBack_Light.png";
 
 const Layout = ({ children }) => {
   const theme = useTheme();
