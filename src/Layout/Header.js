@@ -48,7 +48,7 @@ const Header = ({ flagTheme, setFlagTheme }) => {
           component={"input"}
           type={"text"}
           placeholder={"Search by address, txn hash..."}
-          color={flagTheme === "dark" ? "#ffffff48" : "#17192948"}
+          color={flagTheme === "dark" ? "#ffffff" : "#171929"}
           style={{
             "::placeholder": `color:${
               theme === "dark" ? "#ffffff48" : "#17192948"

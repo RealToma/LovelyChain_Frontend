@@ -4,10 +4,10 @@ import { useTheme } from "@mui/material/styles";
 import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const TableReorgs = ({ data }) => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const theme = useTheme();
 
   return (
@@ -26,10 +26,10 @@ const TableReorgs = ({ data }) => {
               sx={{
                 "&:hover": { background: theme.palette.tertiary.back + 80 },
               }}
-              onClick={() => {
-                navigate("/tokens");
-                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-              }}
+              // onClick={() => {
+              //   navigate("/tokens");
+              //   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+              // }}
             >
               <TextId flex={data.head[0].flexWidth}>{each.id}</TextId>
               <TextTime
