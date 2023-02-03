@@ -19,7 +19,12 @@ const Footer = () => {
         <GroupIconContact>
           {dataFooterIconContact.map((each, index) => {
             return (
-              <Link to={each.link} target="_blank" rel="noopener noreferrer" key={index}>
+              <Link
+                to={each.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={index}
+              >
                 <IconContact
                   key={index}
                   color={theme.palette.link.fIconContactColor}
@@ -68,16 +73,54 @@ const StyledComponent = styled(Box)`
   width: 100%;
   justify-content: space-between;
   margin: 50px 0px;
+
+  transition: all 0.5s;
+  @media (max-width: 1440px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const SectionLeft = styled(Box)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  transition: all 0.5s;
+  @media (max-width: 1440px) {
+    align-items: center;
+  }
 `;
 
 const SectionRight = styled(Box)`
   display: flex;
+
+  transition: all 0.5s;
+  @media (max-width: 1440px) {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 150px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 100px;
+  }
+  @media (max-width: 500px) {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+  }
+  @media (max-width: 350px) {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+  }
 `;
 
 const SectionLogo = styled(Box)`
@@ -124,6 +167,11 @@ const EachTextContactGroup = styled(Box)`
   display: flex;
   flex-direction: column;
   margin-left: 120px;
+
+  transition: all 0.5s;
+  @media (max-width: 1440px) {
+    margin-left: 0px;
+  }
 `;
 
 const TextHeader = styled(Box)`

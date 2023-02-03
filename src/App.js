@@ -31,7 +31,7 @@ const App = () => {
             <Route path="/tokens" element={<Tokens />} />
             <Route path="/validator_details" element={<ValidatorDetails />} />
           </Routes> */}
-          {/* <Footer /> */}
+          <Footer />
         </Layout>
       </BrowserRouter>
     </ThemeProvider>

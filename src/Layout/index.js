@@ -72,6 +72,20 @@ const ImgBack = styled(Box)`
   top: 0px;
   right: 0px;
   z-index: 0;
+
+  transition: all 0.5s;
+  @media (max-width: 1440px) {
+    height: 900px;
+  }
+  @media (max-width: 768px) {
+    height: 700px;
+  }
+  @media (max-width: 500px) {
+    height: 500px;
+  }
+  @media (max-width: 390px) {
+    height: 400px;
+  }
 `;
 
 export default Layout;
