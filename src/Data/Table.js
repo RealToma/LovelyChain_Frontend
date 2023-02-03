@@ -448,3 +448,60 @@ export const dataTableTokens = {
     },
   ],
 };
+
+export const dataTableInternalTransactions = {
+  head: [
+    {
+      text: "Token",
+      flexWidth: 1,
+      flagIconSort: false,
+    },
+    {
+      text: "Address",
+      flexWidth: 1,
+      flagIconSort: false,
+    },
+    {
+      text: "Total Supply",
+      flexWidth: 1,
+      flagIconSort: true,
+    },
+    {
+      text: "Holders Count",
+      flexWidth: 1,
+      flagIconSort: true,
+    },
+  ],
+  body: [
+    {
+      blockId: 631569,
+      time: 1,
+      value01: 851372.27,
+      value02: 3637581.85,
+    },
+    {
+      blockId: 631569,
+      time: 2,
+      value01: 851372.27,
+      value02: 3637581.85,
+    },
+    {
+      blockId: 631569,
+      time: 3,
+      value01: 851372.27,
+      value02: 3637581.85,
+    },
+    {
+      blockId: 631569,
+      time: 5,
+      value01: 851372.27,
+      value02: 3637581.85,
+    },
+    {
+      blockId: 631569,
+      time: 10,
+      value01: 851372.27,
+      value02: 3637581.85,
+    },
+  ],
+};

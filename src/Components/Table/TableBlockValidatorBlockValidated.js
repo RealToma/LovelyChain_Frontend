@@ -4,10 +4,10 @@ import { useTheme } from "@mui/material/styles";
 import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
-const TableBlocks = ({ data }) => {
-  const navigate = useNavigate();
+const TableBlockValidatorBlockValidated = ({ data }) => {
+  // const navigate = useNavigate();
   const theme = useTheme();
 
   return (
@@ -18,6 +18,7 @@ const TableBlocks = ({ data }) => {
       border={theme.palette.dashboard.tableTransHistory.border}
       boxShadow={theme.palette.dashboard.tableTransHistory.boxShadow}
     >
+
       <TableBody>
         {data.body.map((each, index) => {
           return (
@@ -26,15 +27,10 @@ const TableBlocks = ({ data }) => {
               sx={{
                 "&:hover": { background: theme.palette.tertiary.back + 80 },
               }}
-              onClick={() => {
-                navigate("/block_details", {
-                  state: {
-                    index: index,
-                    data: data.body,
-                  },
-                });
-                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-              }}
+              // onClick={() => {
+              //   navigate("/tokens");
+              //   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+              // }}
             >
               <TextId flex={data.head[0].flexWidth}>{each.id}</TextId>
               <TextTime
@@ -241,4 +237,4 @@ const BorderLinearProgress = styled(LinearProgress)({
   },
 });
 
-export default TableBlocks;
+export default TableBlockValidatorBlockValidated;

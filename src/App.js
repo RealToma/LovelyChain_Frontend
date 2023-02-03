@@ -11,6 +11,7 @@ import Blocks from "./Pages/Blocks/Blocks";
 import BlockDetails from "./Pages/Blocks/BlockDetails";
 import Reorgs from "./Pages/Reorgs";
 import Tokens from "./Pages/Tokens";
+import ValidatorDetails from "./Pages/ValidatorDetails/index";
 
 const App = () => {
   const [flagTheme, setFlagTheme] = useState("dark");
@@ -25,9 +26,10 @@ const App = () => {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/accounts" element={<Accounts />} />
             <Route path="/blocks" element={<Blocks />} />
-            <Route path="/blockdetails" element={<BlockDetails />} />
+            <Route path="/block_details" element={<BlockDetails />} />
             <Route path="/reorgs" element={<Reorgs />} />
             <Route path="/tokens" element={<Tokens />} />
+            <Route path="/validator_details" element={<ValidatorDetails />} />
           </Routes>
           <Footer />
         </Layout>

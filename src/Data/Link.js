@@ -16,11 +16,11 @@ export const dataLink = [
       },
       {
         name: "Uncles",
-        link: "uncles",
+        link: "blocks",
       },
       {
         name: "Forkes",
-        link: "forkes",
+        link: "blocks",
       },
     ],
   },
@@ -37,11 +37,11 @@ export const dataLink = [
     subLink: [
       {
         name: "Validated",
-        link: "validated",
+        link: "validator_details",
       },
       {
         name: "Pending",
-        link: "pending",
+        link: "",
       },
     ],
   },
@@ -57,15 +57,15 @@ export const dataLink = [
     subLink: [
       {
         name: "GraphQL",
-        link: "graphql",
+        link: "",
       },
       {
         name: "RPC",
-        link: "rpc",
+        link: "",
       },
       {
         name: "Lovely PC",
-        link: "lovleypc",
+        link: "",
       },
     ],
   },
