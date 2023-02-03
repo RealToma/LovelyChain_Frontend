@@ -109,6 +109,7 @@ const Header = ({ flagTheme, setFlagTheme }) => {
                     color={theme.palette.link.main}
                     key={index}
                     onClick={() => {
+                      handleCloseModal();
                       navigate(each.link);
                       window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
                     }}
@@ -131,6 +132,7 @@ const Header = ({ flagTheme, setFlagTheme }) => {
                           color={theme.palette.link.main + 80}
                           key={index}
                           onClick={() => {
+                            handleCloseModal();
                             navigate(each.link);
                             window.scrollTo({
                               top: 0,

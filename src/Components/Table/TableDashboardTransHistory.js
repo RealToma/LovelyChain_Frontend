@@ -77,6 +77,23 @@ const TableRow = styled(Box)`
   /* &:hover {
     background: rgba(23, 25, 41, 0.48);
   } */
+
+  transition: all 0.5s;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    margin-top: 20px;
+    padding: 0px 20px;
+  }
+  transition: all 0.5s;
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    margin-top: 20px;
+    padding: 0px 10px;
+  }
 `;
 
 const RowLeft = styled(Box)`
@@ -95,6 +112,21 @@ const RowRight = styled(Box)`
   /* identical to box height, or 22px */
 
   letter-spacing: 0.02em;
+  transition: all 0.5s;
+  @media (max-width: 1440px) {
+    margin-top: 14px;
+  }
+  @media (max-width: 768px) {
+    font-family: "Neue Plak";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 110%;
+    /* or 15px */
+
+    letter-spacing: 0.02em;
+    word-break: break-all;
+  }
 `;
 
 const IconBox = styled(Box)`
@@ -117,6 +149,19 @@ const TextTxn = styled(Box)`
 
   letter-spacing: 0.02em;
   margin-left: 24px;
+
+  transition: all 0.5s;
+  @media (max-width: 768px) {
+    font-family: "Neue Plak";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 110%;
+    /* or 15px */
+
+    letter-spacing: 0.02em;
+    word-break: break-all;
+  }
 `;
 
 export default TableDashboardTransHistory;

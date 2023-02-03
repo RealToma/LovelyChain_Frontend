@@ -41,6 +41,13 @@ const StyledComponent = styled(Box)`
 
   border-radius: 24px;
   cursor: pointer;
+
+  transition: all 0.5s;
+  @media (max-width: 768px) {
+    width: 172px;
+    height: 167px;
+    padding: 32px 20px;
+  }
 `;
 
 const TextName = styled(Box)`
@@ -52,6 +59,10 @@ const TextName = styled(Box)`
   /* or 15px */
 
   letter-spacing: 0.01em;
+  transition: all 0.5s;
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
 `;
 
 const TextValue = styled(Box)`
@@ -64,6 +75,11 @@ const TextValue = styled(Box)`
 
   letter-spacing: 0.01em;
   margin-top: 8px;
+
+  transition: all 0.5s;
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
 `;
 
 const ImgIcon = styled(Box)`
@@ -73,6 +89,12 @@ const ImgIcon = styled(Box)`
   top: -33px;
   width: 104px;
   height: 104px;
+
+  transition: all 0.5s;
+  @media (max-width: 768px) {
+    width: 80px;
+    height: 80px;
+  }
 `;
 
 export default StatsComponent;

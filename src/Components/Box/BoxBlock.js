@@ -55,6 +55,12 @@ const StyledComponent = styled(Box)`
   height: 150px;
   backdrop-filter: blur(8px);
   border-radius: 24px;
+
+
+  transition: all 0.5s;
+  @media (max-width: 750px) {
+    width: 100%;
+  }
 `;
 
 const SectionMined = styled(Box)`
