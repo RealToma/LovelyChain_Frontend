@@ -19,7 +19,7 @@ const Footer = () => {
         <GroupIconContact>
           {dataFooterIconContact.map((each, index) => {
             return (
-              <Link to={each.link} target="_blank" rel="noopener noreferrer">
+              <Link to={each.link} target="_blank" rel="noopener noreferrer" key={index}>
                 <IconContact
                   key={index}
                   color={theme.palette.link.fIconContactColor}
@@ -40,9 +40,10 @@ const Footer = () => {
               <TextHeader color={theme.palette.link.main}>
                 {each.name}
               </TextHeader>
-              {each.subLink.map((subLink) => {
+              {each.subLink.map((subLink, index) => {
                 return (
                   <Link
+                    key={index}
                     to={subLink.link}
                     target="_blank"
                     rel="noopener noreferrer"

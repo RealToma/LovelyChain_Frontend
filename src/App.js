@@ -21,7 +21,7 @@ const App = () => {
       <BrowserRouter>
         <Layout>
           <Header flagTheme={flagTheme} setFlagTheme={setFlagTheme} />
-          <Routes>
+          {/* <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/accounts" element={<Accounts />} />
@@ -30,8 +30,8 @@ const App = () => {
             <Route path="/reorgs" element={<Reorgs />} />
             <Route path="/tokens" element={<Tokens />} />
             <Route path="/validator_details" element={<ValidatorDetails />} />
-          </Routes>
-          <Footer />
+          </Routes> */}
+          {/* <Footer /> */}
         </Layout>
       </BrowserRouter>
     </ThemeProvider>

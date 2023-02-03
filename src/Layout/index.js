@@ -1,26 +1,37 @@
-import { ReactNode } from "react";
+// import { ReactNode } from "react";
 import styled from "styled-components";
 import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import imgMainBackDark from "../Assets/Images/Background/mainBack_Dark.png";
+// import imgMainBackDark from "../Assets/Images/Background/mainBack_Dark.png";
+import Lottie from "react-lottie";
+import animationBackData from "../Assets/Animation/donuts.json";
 // import imgMainBackLight from "../Assets/Images/Background/mainBack_Light.png";
 
 const Layout = ({ children }) => {
   const theme = useTheme();
+  const defaultLottieOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationBackData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
   return (
     <StyledComponent bgcolor={theme.palette.secondary.main}>
       <MaxComponet>{children}</MaxComponet>
       <ImgBack>
-        <img src={imgMainBackDark} height={'100%'} alt="imgBack" />
+        {/* <img src={imgMainBackDark} height={"100%"} alt="imgBack" /> */}
+        <Lottie options={defaultLottieOptions} height={"100%"} width={"100%"} />
       </ImgBack>
     </StyledComponent>
   );
 };
 
-Layout.propTypes = {
-  children: ReactNode,
-};
+// Layout.propTypes = {
+//   children: ReactNode,
+// };
 
 const StyledComponent = styled(Box)`
   display: flex;
@@ -46,7 +57,7 @@ const MaxComponet = styled(Box)`
 const ImgBack = styled(Box)`
   display: flex;
   position: absolute;
-  height: 1000px;
+  height: 1200px;
   top: 0px;
   right: 0px;
   z-index: 0;

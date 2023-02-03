@@ -48,8 +48,8 @@ const Dashboard = () => {
               cy="87"
               r="80"
               style={{
-                stroke: theme.palette.circleProgress.color,
-                color: theme.palette.circleProgress.color,
+                // stroke: theme.palette.circleProgress.color,
+                // color: theme.palette.circleProgress.color,
                 filter: `drop-shadow(${theme.palette.circleProgress.bShadowLine})`,
               }}
             />
@@ -184,11 +184,35 @@ const StatsProgress = styled(Box)`
     animation: progress-1 2s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
   }
   @keyframes progress-1 {
-    from {
+    0% {
       stroke-dasharray: 510;
+      stroke: #ea4694;
+      color: #ea4694;
     }
-    to {
+    85% {
       stroke-dasharray: 850;
+      color: #ea4694;
+      stroke: #ea4694;
+    }
+    89% {
+      stroke-dasharray: 850;
+      stroke: #171929;
+      color: #171929;
+    }
+    93% {
+      stroke-dasharray: 850;
+      stroke: #ea4694;
+      color: #ea4694;
+    }
+    96% {
+      stroke-dasharray: 850;
+      stroke: #171929;
+      color: #171929;
+    }
+    100% {
+      stroke-dasharray: 850;
+      stroke: #ea4694;
+      color: #ea4694;
     }
   }
 `;

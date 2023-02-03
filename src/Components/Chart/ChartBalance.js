@@ -91,7 +91,7 @@ export default ChartBalance;
 
 const StyledContainer = styled.div`
   .apexcharts-tooltip {
-    color: #EA4694;
+    color: #ea4694;
   }
   .apexcharts-tooltip.apexcharts-theme-light {
     /* background: rgba(110, 220, 181, 0.5); */
