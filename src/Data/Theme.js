@@ -1,4 +1,8 @@
 export const darkTheme = {
+  zIndex: {
+    appBar: 1251,
+    modal: 1500,
+  },
   palette: {
     mode: "light",
     primary: {
@@ -97,6 +101,10 @@ export const darkTheme = {
 };
 
 export const lightTheme = {
+  zIndex: {
+    appBar: 1251,
+    modal: 1500,
+  },
   palette: {
     mode: "light",
     primary: {

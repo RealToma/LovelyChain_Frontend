@@ -52,6 +52,17 @@ const MaxComponet = styled(Box)`
   padding: 0px 70px;
   box-sizing: border-box;
   z-index: 1;
+
+  transition: all 0.5s;
+  @media (max-width: 1024px) {
+    padding: 0px 50px;
+  }
+  @media (max-width: 768px) {
+    padding: 0px 30px;
+  }
+  @media (max-width: 425px) {
+    padding: 0px 16px;
+  }
 `;
 
 const ImgBack = styled(Box)`
