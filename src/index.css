@@ -33,6 +33,23 @@ iframe {
   border-radius: 100px;
 }
 
+@media (max-width: 1000px) {
+  ::-webkit-scrollbar {
+    width: unset;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: unset;
+    border-radius: unset;
+    cursor: unset;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: unset;
+    border-radius: unset;
+  }
+}
+
 @font-face {
   font-size: 40px;
   line-height: 100%;

@@ -39,6 +39,7 @@ const ValidatorDetails = () => {
             <ChartBalance
               data={[453, 253, 600, 400, 500, 300, 430, 550]}
               color={theme.palette.link.main}
+              height={"100%"}
             />
           </SectionChart>
         </SectionBalance>
@@ -182,6 +183,13 @@ const SectionHead = styled(Box)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  transition: all 0.5s;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 `;
 const SectionBalance = styled(Box)`
   display: flex;
@@ -195,6 +203,12 @@ const SectionAddressDetails = styled(Box)`
   display: flex;
   flex: 1;
   flex-direction: column;
+
+  transition: all 0.5s;
+  @media (max-width: 1000px) {
+    margin-top: 50px;
+    width: 100%;
+  }
 `;
 
 const TextSubject = styled(Box)`
@@ -205,6 +219,10 @@ const TextSubject = styled(Box)`
   line-height: 110%;
 
   letter-spacing: 0.01em;
+  transition: all 0.5s;
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 const SectionTitleBalance = styled(Box)`
@@ -229,6 +247,14 @@ const TeextBig = styled(Box)`
   letter-spacing: 0.01em;
 
   margin-left: 8px;
+  transition: all 0.5s;
+  @media (max-width: 768px) {
+    margin-left: 3px;
+    font-size: 16px;
+  }
+  @media (max-width: 350px) {
+    font-size: 14px;
+  }
 `;
 
 const TextSmall = styled(Box)`
@@ -242,6 +268,13 @@ const TextSmall = styled(Box)`
   letter-spacing: 0.01em;
 
   margin-left: 8px;
+  transition: all 0.5s;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+  @media (max-width: 350px) {
+    font-size: 12px;
+  }
 `;
 
 const BoxPoint = styled(Box)`
@@ -249,6 +282,10 @@ const BoxPoint = styled(Box)`
   height: 4px;
   border-radius: 100%;
   margin-left: 24px;
+  transition: all 0.5s;
+  @media (max-width: 768px) {
+    margin-left: 8px;
+  }
 `;
 
 const SectionWalletDetails = styled(Box)`
@@ -259,6 +296,11 @@ const SectionWalletDetails = styled(Box)`
   box-sizing: border-box;
   border-radius: 24px;
   margin-top: 24px;
+
+  transition: all 0.5s;
+  @media (max-width: 768px) {
+    padding: 24px 20px 24px 24px;
+  }
 `;
 
 const SectionWallet = styled(Box)`
@@ -282,6 +324,12 @@ const IconBox = styled(Box)`
   height: 56px;
   border-radius: 12px;
   font-size: 1.5rem;
+
+  transition: all 0.5s;
+  @media (max-width: 768px) {
+    width: 42px;
+    height: 42px;
+  }
 `;
 
 const TextDetails = styled(Box)`
@@ -302,9 +350,15 @@ const TextWallet = styled(Box)`
 
   letter-spacing: 0.02em;
   margin-bottom: 8px;
+
+  transition: all 0.5s;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 const TextLastBalanceUpdate = styled(Box)`
+  word-break: break-all;
   font-family: "Neue Plak";
   font-style: normal;
   font-weight: 400;
@@ -313,12 +367,28 @@ const TextLastBalanceUpdate = styled(Box)`
   /* identical to box height, or 22px */
 
   letter-spacing: 0.02em;
+  transition: all 0.5s;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 const SectionChart = styled(Box)`
   display: flex;
   width: 100%;
   margin-top: 24px;
+  height: 400px;
+
+  transition: all 0.5s;
+  @media (max-width: 768px) {
+    height: 350px;
+  }
+  @media (max-width: 500px) {
+    height: 300px;
+  }
+  @media (max-width: 350px) {
+    height: 250px;
+  }
 `;
 
 const SectionTab = styled(Box)`
@@ -327,6 +397,10 @@ const SectionTab = styled(Box)`
   align-items: center;
   margin-top: 100px;
   margin-bottom: 24px;
+  transition: all 0.5s;
+  @media (max-width: 1000px) {
+    overflow-x: scroll;
+  }
 `;
 
 const TabEach = styled(Box)`
