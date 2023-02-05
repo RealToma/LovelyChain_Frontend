@@ -15,24 +15,42 @@ const TableInternalTransactions = ({ data }) => {
             bgcolor={theme.palette.table.back03}
             boxShadow={theme.palette.table.boxShadow01}
           >
-            <TextBlock flex={data.head[0].flexWidth}>
-              Block {each.blockId}
-            </TextBlock>
-            <TextTime
-              flex={data.head[1].flexWidth}
-              color={theme.palette.link.main}
-            >
-              {each.time} day ago
-            </TextTime>
-            <TextValue01 flex={data.head[2].flexWidth}>
-              +{each.value01.toLocaleString("en-US")} LOVELY
-            </TextValue01>
-            <TextValue02
-              flex={data.head[3].flexWidth}
-              color={theme.palette.link.main}
-            >
-              {each.value02.toLocaleString("en-US")} LOVELY
-            </TextValue02>
+            <SectionDesktop>
+              <TextBlock flex={data.head[0].flexWidth}>
+                Block {each.blockId}
+              </TextBlock>
+              <TextTime
+                flex={data.head[1].flexWidth}
+                color={theme.palette.link.main}
+              >
+                {each.time} day ago
+              </TextTime>
+              <TextValue01 flex={data.head[2].flexWidth}>
+                +{each.value01.toLocaleString("en-US")} LOVELY
+              </TextValue01>
+              <TextValue02
+                flex={data.head[3].flexWidth}
+                color={theme.palette.link.main}
+              >
+                {each.value02.toLocaleString("en-US")} LOVELY
+              </TextValue02>
+            </SectionDesktop>
+
+            <SectionUp>
+              <TextBlock>Block {each.blockId}</TextBlock>
+              <TextTime color={theme.palette.link.main}>
+                {each.time} day ago
+              </TextTime>
+            </SectionUp>
+
+            <SectionUp mt={"20px"}>
+              <TextValue01>
+                +{each.value01.toLocaleString("en-US")} LOVELY
+              </TextValue01>
+              <TextValue02 color={theme.palette.link.main}>
+                {each.value02.toLocaleString("en-US")} LOVELY
+              </TextValue02>
+            </SectionUp>
           </RowEach>
         );
       })}
@@ -44,7 +62,6 @@ const StyledComponent = styled(Box)`
   display: flex;
   width: 100%;
   flex-direction: column;
-
 `;
 
 const RowEach = styled(Box)`
@@ -59,6 +76,12 @@ const RowEach = styled(Box)`
   margin-top: 24px;
   cursor: pointer;
 
+  transition: all 0.5s;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    height: 100%;
+    padding: 24px 22px;
+  }
 `;
 
 const TextBlock = styled(Box)`
@@ -73,6 +96,11 @@ const TextBlock = styled(Box)`
   letter-spacing: 0.01em;
 
   color: #ea4694;
+
+  transition: all 0.5s;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 const TextTime = styled(Box)`
@@ -97,7 +125,13 @@ const TextValue01 = styled(Box)`
   /* identical to box height, or 22px */
 
   letter-spacing: 0.02em;
-
+  transition: all 0.5s;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+  @media (max-width: 350px) {
+    font-size: 16px;
+  }
   color: #15b341;
 `;
 const TextValue02 = styled(Box)`
@@ -112,5 +146,33 @@ const TextValue02 = styled(Box)`
 
   text-align: right;
   letter-spacing: 0.02em;
+  transition: all 0.5s;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+  @media (max-width: 350px) {
+    font-size: 16px;
+  }
+`;
+
+const SectionDesktop = styled(Box)`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  transition: all 0.5s;
+  @media (max-width: 1000px) {
+    display: none;
+  }
+`;
+
+const SectionUp = styled(Box)`
+  display: none;
+  width: 100%;
+  transition: all 0.5s;
+  @media (max-width: 1000px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 `;
 export default TableInternalTransactions;

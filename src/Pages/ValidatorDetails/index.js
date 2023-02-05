@@ -400,6 +400,8 @@ const SectionTab = styled(Box)`
   transition: all 0.5s;
   @media (max-width: 1000px) {
     overflow-x: scroll;
+    margin-top: 40px;
+    margin-bottom: 0px;
   }
 `;
 
@@ -419,6 +421,7 @@ const TabEach = styled(Box)`
 
   letter-spacing: 0.01em;
   user-select: none;
+  white-space: nowrap;
   cursor: pointer;
   transition: 0.3s;
 `;

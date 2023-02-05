@@ -62,6 +62,13 @@ const SectionBalance = styled(Box)`
   align-items: center;
   justify-content: space-between;
   margin-top: 12px;
+
+  transition: all 0.5s;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 `;
 
 const SectoinTextBalance = styled(Box)`
@@ -80,6 +87,14 @@ const TextLovely = styled(Box)`
   letter-spacing: 0.01em;
 
   color: #ea4694;
+
+  transition: all 0.5s;
+  @media (max-width: 900px) {
+    font-size: 24px;
+  }
+  @media (max-width: 350px) {
+    font-size: 18px;
+  }
 `;
 
 const TextValue = styled(Box)`
@@ -96,6 +111,11 @@ const TextValue = styled(Box)`
 const SectionTextDate = styled(Box)`
   display: flex;
   align-items: center;
+
+  transition: all 0.5s;
+  @media (max-width: 900px) {
+    margin-top: 24px;
+  }
 `;
 
 const TextDate = styled(Box)`
@@ -114,11 +134,25 @@ const TextDate = styled(Box)`
   &:hover {
     color: #ea4694;
   }
+
+  transition: all 0.5s;
+  @media (max-width: 900px) {
+    margin-left: 0px;
+    margin-right: 24px;
+  }
+
+  @media (max-width: 500px) {
+    margin-left: 0px;
+    margin-right: 20px;
+  }
 `;
 
 const IconWave = styled(Box)`
   margin: 0px 16px;
   font-size: 1.5rem;
+  @media (max-width: 900px) {
+    margin: 0px 8px;
+  }
 `;
 
 const SectionChart = styled(Box)`
@@ -126,13 +160,21 @@ const SectionChart = styled(Box)`
   width: 100%;
   margin-top: 50px;
   height: 400px;
+  transition: all 0.5s;
+  @media (max-width: 768px) {
+    height: 350px;
+  }
+  @media (max-width: 500px) {
+    height: 300px;
+  }
+  @media (max-width: 350px) {
+    height: 200px;
+  }
 `;
 
 const SectionTransHistory = styled(Box)`
   display: flex;
   margin-top: 24px;
 `;
-
-
 
 export default InternalTransactions;

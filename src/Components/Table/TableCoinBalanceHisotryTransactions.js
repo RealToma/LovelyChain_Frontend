@@ -40,6 +40,8 @@ const StyledComponent = styled(Box)`
   display: flex;
   width: 100%;
   flex-direction: column;
+
+
 `;
 
 const RowEach = styled(Box)`
@@ -64,6 +66,11 @@ const TextBlock = styled(Box)`
   letter-spacing: 0.01em;
 
   color: #ea4694;
+
+  transition: all 0.5s;
+  @media (max-width: 900px) {
+    font-size: 20px;
+  }
 `;
 
 const TextTime = styled(Box)`
@@ -76,6 +83,7 @@ const TextTime = styled(Box)`
   /* identical to box height, or 18px */
 
   letter-spacing: 0.02em;
+
 `;
 
 const TextValue01 = styled(Box)`
@@ -90,6 +98,11 @@ const TextValue01 = styled(Box)`
   letter-spacing: 0.02em;
   color: #15b341;
   margin-top: 8px;
+  
+  transition: all 0.5s;
+  @media (max-width: 900px) {
+    font-size: 20px;
+  }
 `;
 const TextValue02 = styled(Box)`
   display: flex;
@@ -101,6 +114,7 @@ const TextValue02 = styled(Box)`
   /* or 15px */
 
   letter-spacing: 0.02em;
+
 `;
 
 const RowUp = styled(Box)`
@@ -109,6 +123,12 @@ const RowUp = styled(Box)`
   justify-content: space-between;
   padding: 20px 32px;
   box-sizing: border-box;
+
+    
+  transition: all 0.5s;
+  @media (max-width: 900px) {
+    padding: 20px 22px;
+  }
 `;
 
 const RowDown = styled(Box)`
@@ -116,6 +136,11 @@ const RowDown = styled(Box)`
   flex-direction: column;
   padding: 20px 32px;
   box-sizing: border-box;
+
+  transition: all 0.5s;
+  @media (max-width: 900px) {
+    padding: 20px 22px;
+  }
 `;
 
 export default TableCoinBalanceHisotryTransactions;
