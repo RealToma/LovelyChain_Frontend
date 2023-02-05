@@ -295,7 +295,10 @@ const BlockDetails = () => {
       </SectionDetails>
       <SectionTransactions>
         <TextSubject color={theme.palette.link.main}>Transactions</TextSubject>
-        <TableBlockDetailTransactions data={dataBlockDetailsTrans} height={'100%'} />
+        <TableBlockDetailTransactions
+          data={dataBlockDetailsTrans}
+          height={"100%"}
+        />
       </SectionTransactions>
     </StyledComponent>
   );
@@ -306,6 +309,11 @@ const StyledComponent = styled(Box)`
   width: 100%;
   margin-top: 50px;
   margin-bottom: 100px;
+
+  transition: all 0.5s;
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 
 const SectionDetails = styled(Box)`
@@ -313,6 +321,11 @@ const SectionDetails = styled(Box)`
   width: 400px;
   flex-direction: column;
   margin-right: 32px;
+
+  transition: all 0.5s;
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `;
 
 const SectionTransactions = styled(Box)`
@@ -320,6 +333,11 @@ const SectionTransactions = styled(Box)`
   flex: 1;
   flex-direction: column;
   width: 100%;
+
+  transition: all 0.5s;
+  @media (max-width: 900px) {
+    margin-top: 34px;
+  }
 `;
 
 const TextSubject = styled(Box)`
@@ -341,6 +359,11 @@ const SectionEachDetails = styled(Box)`
   /* Note: backdrop-filter has minimal browser support */
 
   border-radius: 24px;
+
+  transition: all 0.5s;
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `;
 
 const SectionHead = styled(Box)`
@@ -350,6 +373,11 @@ const SectionHead = styled(Box)`
   align-items: center;
   padding: 0px 32px;
   box-sizing: border-box;
+
+  transition: all 0.5s;
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
 `;
 
 const IconArrowButton = styled(Box)`
@@ -384,6 +412,17 @@ const TextBlockId = styled(Box)`
 
   letter-spacing: 0.01em;
   margin: 0px 16px;
+
+  transition: all 0.5s;
+  @media (max-width: 900px) {
+    font-size: 20px;
+  }
+  @media (max-width: 500px) {
+    font-size: 18px;
+  }
+  @media (max-width: 350px) {
+    font-size: 16px;
+  }
 `;
 
 const SectionDetailBody = styled(Box)`
@@ -392,6 +431,14 @@ const SectionDetailBody = styled(Box)`
   width: 100%;
   padding: 20px 32px;
   box-sizing: border-box;
+
+  transition: all 0.5s;
+  @media (max-width: 900px) {
+    padding: 20px 24px;
+  }
+  @media (max-width: 500px) {
+    padding: 20px 18px;
+  }
 `;
 
 const EachDetail = styled(Box)`

@@ -133,6 +133,7 @@ const StyledComponent = styled(Box)`
   @media (max-width: 1440px) {
     margin-bottom: 50px;
   }
+  
 `;
 
 const SectionStats = styled(Box)`
