@@ -265,6 +265,7 @@ const TextTime = styled(Box)`
   text-align: right;
   letter-spacing: 0.02em;
 
+  transition: all 0.5s;
   @media (max-width: 500px) {
     font-family: "Neue Plak";
     font-style: normal;
