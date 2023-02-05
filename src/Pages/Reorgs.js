@@ -9,7 +9,7 @@ const Reorgs = () => {
 
   return (
     <StyledComponent>
-      <TextSubject color={theme.palette.link.main}>Tokens</TextSubject>
+      <TextSubject color={theme.palette.link.main}>Reorgs</TextSubject>
       <TableReorgs data={dataTableBlocks} />
     </StyledComponent>
   );
@@ -31,6 +31,10 @@ const TextSubject = styled(Box)`
   line-height: 110%;
 
   letter-spacing: 0.01em;
+  transition: all 0.5s;
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 export default Reorgs;

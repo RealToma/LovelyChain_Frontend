@@ -43,8 +43,14 @@ const StyledComponent = styled(Box)`
 
 const SectionHead = styled(Box)`
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
+  transition: all 0.5s;
+  @media (max-width: 389px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const TextSubject = styled(Box)`
@@ -55,11 +61,20 @@ const TextSubject = styled(Box)`
   line-height: 110%;
 
   letter-spacing: 0.01em;
+  transition: all 0.5s;
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 const SectionSearch = styled(Box)`
   display: flex;
   align-items: flex-start;
+
+  transition: all 0.5s;
+  @media (max-width: 389px) {
+    margin-top: 24px;
+  }
 `;
 
 const IconSearch = styled(Box)`
@@ -82,6 +97,11 @@ const InputSearch = styled(Box)`
   /* identical to box height, or 16px */
 
   letter-spacing: 0.01em;
+
+  transition: all 0.5s;
+  @media (max-width: 500px) {
+    width: 200px;
+  }
 
   ::placeholder {
     font-family: "Neue Plak";

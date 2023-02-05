@@ -61,6 +61,7 @@ const TextSubject = styled(Box)`
   /* or 26px */
 
   letter-spacing: 0.01em;
+  
 `;
 
 const SectionBalance = styled(Box)`

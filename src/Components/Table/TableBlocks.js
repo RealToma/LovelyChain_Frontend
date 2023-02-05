@@ -343,6 +343,7 @@ const SectionProgress = styled(Box)`
   display: flex;
   width: 100%;
   flex-direction: column;
+  
 `;
 
 const SectionTextProgreess = styled(Box)`

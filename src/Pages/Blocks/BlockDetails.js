@@ -348,6 +348,10 @@ const TextSubject = styled(Box)`
   line-height: 110%;
 
   letter-spacing: 0.01em;
+  transition: all 0.5s;
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 const SectionEachDetails = styled(Box)`
