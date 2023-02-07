@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import { dataStatsDashboard, dataStatsDashboardBlocks } from "../Data/Stats";
+import { dataStatsDashboard } from "../Data/Stats";
 import { dataTableBlocks } from "../Data/Table";
 
 import { dataDashboardTransHistory } from "../Data/Table";

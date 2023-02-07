@@ -57,15 +57,15 @@ export const dataLink = [
     subLink: [
       {
         name: "GraphQL",
-        link: "",
+        link: "https://explorer.lovely.finance/graphiql",
       },
       {
         name: "RPC",
-        link: "",
+        link: "https://explorer.lovely.finance/api-docs",
       },
       {
         name: "Lovely PC",
-        link: "",
+        link: "https://explorer.lovely.finance/eth-rpc-api-docs",
       },
     ],
   },

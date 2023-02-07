@@ -3,10 +3,12 @@ import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const TableAddresses = ({ data }) => {
   const theme = useTheme();
   const [flagSortClick, setFlagSortClick] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -30,6 +32,7 @@ const TableAddresses = ({ data }) => {
                     index === data.head.length - 1 ? "flex-end" : "flex-start"
                   }
                   color={theme.palette.link.main + 48}
+
                 >
                   <Box display="flex" alignSelf={"center"}>
                     {each.text}
@@ -62,6 +65,10 @@ const TableAddresses = ({ data }) => {
                 key={index}
                 sx={{
                   "&:hover": { background: theme.palette.tertiary.back + 80 },
+                }}
+                onClick={() => {
+                  navigate("/validator_details");
+                  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
                 }}
               >
                 <SectionNumber flex={data.head[0].flexWidth}>
