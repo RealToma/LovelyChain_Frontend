@@ -6,11 +6,11 @@ export const dataFooterContact = [
     subLink: [
       {
         name: "Accounts",
-        link: "123",
+        link: "/accounts",
       },
       {
         name: "Tokens",
-        link: "123",
+        link: "/tokens",
       },
     ],
   },
@@ -19,13 +19,12 @@ export const dataFooterContact = [
     subLink: [
       {
         name: "Uncles",
-        link: "123",
+        link: "/blocks",
       },
       {
         name: "Forked Blocks",
         link: "123",
       },
-
     ],
   },
   {
@@ -39,7 +38,6 @@ export const dataFooterContact = [
         name: "Pending",
         link: "123",
       },
-
     ],
   },
   {
@@ -47,15 +45,15 @@ export const dataFooterContact = [
     subLink: [
       {
         name: "GraphQL",
-        link: "123",
+        link: "https://explorer.lovely.finance/graphiql",
       },
       {
         name: "RPC",
-        link: "123",
+        link: "https://explorer.lovely.finance/api-docs",
       },
       {
         name: "Lovely RPC",
-        link: "123",
+        link: "https://explorer.lovely.finance/eth-rpc-api-docs",
       },
     ],
   },
@@ -64,14 +62,14 @@ export const dataFooterContact = [
 export const dataFooterIconContact = [
   {
     icon: <FaTwitter />,
-    link: "twiiter",
+    link: "https://explorer.lovely.finance/uncles#",
   },
   {
     icon: <FaTelegramPlane />,
-    link: "facebook",
+    link: "https://explorer.lovely.finance/uncles#",
   },
   {
     icon: <FaFacebookF />,
-    link: "telegram",
+    link: "https://explorer.lovely.finance/uncles#",
   },
 ];

@@ -2,6 +2,8 @@ import styled, { keyframes } from "styled-components";
 import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { dataStatsDashboard, dataStatsDashboardBlocks } from "../Data/Stats";
+import { dataTableBlocks } from "../Data/Table";
+
 import { dataDashboardTransHistory } from "../Data/Table";
 import StatsComponent from "../Components/Stats/StatsComponent";
 import imgRocket from "../Assets/Images/Icon/rocket.png";
@@ -9,9 +11,11 @@ import imgPremiumLove from "../Assets/Images/Background/premiumLove.png";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import BoxBlock from "../Components/Box/BoxBlock";
 import TableDashboardTransHistory from "../Components/Table/TableDashboardTransHistory";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
 
   return (
     <StyledComponent>
@@ -60,15 +64,30 @@ const Dashboard = () => {
         <SectionBlockText>
           <TextSubject color={theme.palette.link.main}>Blocks</TextSubject>
           <SectionViewAll>
-            <TextViewAll color={theme.palette.link.main}>View All</TextViewAll>
+            <TextViewAll
+              color={theme.palette.link.main}
+              onClick={() => {
+                navigate("/blocks");
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+              }}
+            >
+              View All
+            </TextViewAll>
             <IconRight color={theme.palette.link.main}>
               <MdOutlineKeyboardArrowRight />
             </IconRight>
           </SectionViewAll>
         </SectionBlockText>
         <SectionBlockGroup>
-          {dataStatsDashboardBlocks.map((each, index) => {
-            return <BoxBlock data={each} key={index} index={index} />;
+          {dataTableBlocks.body.slice(0, 4).map((each, index) => {
+            return (
+              <BoxBlock
+                data={each}
+                key={index}
+                index={index}
+                dataBody={dataTableBlocks.body}
+              />
+            );
           })}
         </SectionBlockGroup>
       </SectionBlock>
@@ -133,7 +152,6 @@ const StyledComponent = styled(Box)`
   @media (max-width: 1440px) {
     margin-bottom: 50px;
   }
-  
 `;
 
 const SectionStats = styled(Box)`

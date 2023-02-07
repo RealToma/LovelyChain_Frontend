@@ -1,15 +1,26 @@
 import styled from "styled-components";
 import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+import { useNavigate } from "react-router-dom";
 
-const BoxBlock = ({ data, index }) => {
+const BoxBlock = ({ data, index, dataBody }) => {
   const theme = useTheme();
+  const navigate = useNavigate();
 
   return (
     <StyledComponent
       border={`1px solid ${theme.palette.link.main + 16}`}
       style={{ backgroundImage: theme.palette.dashBlocks[index].back }}
       boxShadow={theme.palette.dashBlocks[index].shadow}
+      onClick={() => {
+        navigate("/block_details", {
+          state: {
+            index: index,
+            data: dataBody,
+          },
+        });
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      }}
     >
       {data.flagMined ? (
         <SectionMined>
@@ -31,7 +42,7 @@ const BoxBlock = ({ data, index }) => {
                 0 Transactions
               </TextTransaction>
               <TextTransaction color={theme.palette.link.main} mt={"10px"}>
-                {data.timeTrans} minutes ago
+                {data.time} minutes ago
               </TextTransaction>
             </SectionTransaction>
             <SectionValidator>
@@ -55,7 +66,8 @@ const StyledComponent = styled(Box)`
   height: 150px;
   backdrop-filter: blur(8px);
   border-radius: 24px;
-
+  user-select: none;
+  cursor: pointer;
 
   transition: all 0.5s;
   @media (max-width: 750px) {

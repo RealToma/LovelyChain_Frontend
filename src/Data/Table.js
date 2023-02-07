@@ -201,6 +201,7 @@ export const dataTableBlocks = {
         "384,774,286,395,851,167,561,210,837,353,471,904,546,121,584",
       nonce: "0x0000000000000000",
       reward: 135.0,
+      flagMined: false,
     },
     {
       id: "#321452",
@@ -216,12 +217,13 @@ export const dataTableBlocks = {
       height: 1130750,
       timestamp: "1 min ago, Dec 5-2022 05:56:54 PM +3 UTC",
       hash: "0x123128cFB416d3caDA123199a1075d3E",
-      hashParent: "0x68cFB40x123128cFB416d3caDA123199a1075d3E16d3caDA123199a1075d3E",
+      hashParent:
+        "0x68cFB40x123128cFB416d3caDA123199a1075d3E16d3caDA123199a1075d3E",
       difficulty: "366,920,53,920,538,463,463,374, 607,431,768,211,454",
-      difficultyTotal:
-        "366,920,53,920,538,463,463,374,471,904,546,121,584",
+      difficultyTotal: "366,920,53,920,538,463,463,374,471,904,546,121,584",
       nonce: "0x0000000000000000",
       reward: 25.0,
+      flagMined: true,
     },
     {
       id: "#256532",
@@ -243,6 +245,7 @@ export const dataTableBlocks = {
         "384,774,286,395,851,167,561,210,837,353,471,904,546,121,584",
       nonce: "0x0000000000000000",
       reward: 125.0,
+      flagMined: true,
     },
     {
       id: "#786583",
@@ -264,6 +267,7 @@ export const dataTableBlocks = {
         "384,774,286,395,851,167,561,210,837,353,471,904,546,121,584",
       nonce: "0x0000000000000000",
       reward: 135.0,
+      flagMined: false,
     },
     {
       id: "#423633",
@@ -285,6 +289,7 @@ export const dataTableBlocks = {
         "384,774,286,395,851,167,561,210,837,353,471,904,546,121,584",
       nonce: "0x0000000000000000",
       reward: 135.0,
+      flagMined: false,
     },
     {
       id: "#454642",
@@ -306,6 +311,7 @@ export const dataTableBlocks = {
         "384,774,286,395,851,167,561,210,837,353,471,904,546,121,584",
       nonce: "0x0000000000000000",
       reward: 135.0,
+      flagMined: false,
     },
     {
       id: "#1232541",
@@ -327,6 +333,7 @@ export const dataTableBlocks = {
         "384,774,286,395,851,167,561,210,837,353,471,904,546,121,584",
       nonce: "0x0000000000000000",
       reward: 135.0,
+      flagMined: false,
     },
     {
       id: "#525235",
@@ -348,6 +355,7 @@ export const dataTableBlocks = {
         "384,774,286,395,851,167,561,210,837,353,471,904,546,121,584",
       nonce: "0x0000000000000000",
       reward: 135.0,
+      flagMined: false,
     },
   ],
 };
