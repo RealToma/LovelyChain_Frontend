@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { MdOutlineAccountBalanceWallet } from "react-icons/md";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const TableBlockValidatorTransactions = ({ data, height }) => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const theme = useTheme();
 
   return (
@@ -23,8 +23,8 @@ const TableBlockValidatorTransactions = ({ data, height }) => {
             key={index}
             sx={{ "&:hover": { background: theme.palette.tertiary.back + 60 } }}
             onClick={() => {
-              // navigate("/reorgs");
-              // window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+              navigate("/transaction_details");
+              window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
             }}
           >
             <RowLeft>

@@ -28,7 +28,7 @@ const TableBlockValidatorBlockValidated = ({ data }) => {
                   "&:hover": { background: theme.palette.tertiary.back + 80 },
                 }}
                 // onClick={() => {
-                //   navigate("/tokens");
+                //   navigate("/block_details");
                 //   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
                 // }}
               >

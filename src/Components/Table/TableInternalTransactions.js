@@ -5,6 +5,7 @@ import { useTheme } from "@mui/material/styles";
 const TableInternalTransactions = ({ data }) => {
   const theme = useTheme();
 
+
   return (
     <StyledComponent>
       {data.body.map((each, index) => {
@@ -14,6 +15,7 @@ const TableInternalTransactions = ({ data }) => {
             border={`1px solid ${theme.palette.link.main + 16}`}
             bgcolor={theme.palette.table.back03}
             boxShadow={theme.palette.table.boxShadow01}
+
           >
             <SectionDesktop>
               <TextBlock flex={data.head[0].flexWidth}>

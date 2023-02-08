@@ -2,10 +2,12 @@ import styled from "styled-components";
 import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { MdOutlineAccountBalanceWallet } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
 
 const TableDashboardTransHistory = ({ data, height }) => {
   const theme = useTheme();
+  const navigate = useNavigate();
 
   return (
     <StyledComponent
@@ -21,7 +23,10 @@ const TableDashboardTransHistory = ({ data, height }) => {
           <TableRow
             key={index}
             sx={{ "&:hover": { background: theme.palette.tertiary.back + 60 } }}
-            onClick={() => {}}
+            onClick={() => {
+              navigate("/transaction_details");
+              window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            }}
           >
             <RowLeft>
               <IconBox

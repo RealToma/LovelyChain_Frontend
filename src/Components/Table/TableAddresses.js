@@ -32,7 +32,6 @@ const TableAddresses = ({ data }) => {
                     index === data.head.length - 1 ? "flex-end" : "flex-start"
                   }
                   color={theme.palette.link.main + 48}
-
                 >
                   <Box display="flex" alignSelf={"center"}>
                     {each.text}
