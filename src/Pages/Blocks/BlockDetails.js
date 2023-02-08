@@ -16,7 +16,6 @@ const BlockDetails = () => {
   const theme = useTheme();
   const { state } = useLocation();
   const [indexBlock, setIndexBlock] = useState(state.index);
-  console.log(state);
 
   const handleLeftBlock = () => {
     let temp = indexBlock;

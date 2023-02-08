@@ -119,11 +119,8 @@ const Header = ({ flagTheme, setFlagTheme }) => {
                 );
               } else {
                 return (
-                  <SectionMobileSubLink>
-                    <TextMobileLinkMain
-                      color={theme.palette.link.main}
-                      key={index}
-                    >
+                  <SectionMobileSubLink key={index}>
+                    <TextMobileLinkMain color={theme.palette.link.main}>
                       {each.name}
                     </TextMobileLinkMain>
                     {each.subLink.map((each, index) => {

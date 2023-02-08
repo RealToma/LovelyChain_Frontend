@@ -19,9 +19,8 @@ const TableBlockDetailTransactions = ({ data, height }) => {
     >
       {data.map((each, index) => {
         return (
-          <>
+          <Box display={"flex"} width={'100%'} key={index}>
             <TableRow
-              key={index}
               sx={{
                 "&:hover": { background: theme.palette.tertiary.back + 60 },
               }}
@@ -51,7 +50,6 @@ const TableBlockDetailTransactions = ({ data, height }) => {
               </RowRight>
             </TableRow>
             <TableRowMobile
-              key={index}
               sx={{
                 "&:hover": { background: theme.palette.tertiary.back + 60 },
               }}
@@ -89,7 +87,7 @@ const TableBlockDetailTransactions = ({ data, height }) => {
                 {each.to.slice(0, 6) + "..." + each.to.slice(-2)}
               </RowRight>
             </TableRowMobile>
-          </>
+          </Box>
         );
       })}
     </StyledComponent>
