@@ -20,7 +20,7 @@ export const dataLink = [
       },
       {
         name: "Forkes",
-        link: "blocks",
+        link: "reorgs",
       },
     ],
   },
@@ -41,7 +41,7 @@ export const dataLink = [
       },
       {
         name: "Pending",
-        link: "",
+        link: "validator_details",
       },
     ],
   },

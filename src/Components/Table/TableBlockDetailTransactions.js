@@ -25,10 +25,6 @@ const TableBlockDetailTransactions = ({ data, height }) => {
               sx={{
                 "&:hover": { background: theme.palette.tertiary.back + 60 },
               }}
-              onClick={() => {
-                navigate("/reorgs");
-                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-              }}
             >
               <RowLeft>
                 <IconBox

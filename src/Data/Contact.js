@@ -23,7 +23,7 @@ export const dataFooterContact = [
       },
       {
         name: "Forked Blocks",
-        link: "123",
+        link: "/reorgs",
       },
     ],
   },
@@ -32,11 +32,11 @@ export const dataFooterContact = [
     subLink: [
       {
         name: "Validated",
-        link: "123",
+        link: "/validator_details",
       },
       {
         name: "Pending",
-        link: "123",
+        link: "/validator_details",
       },
     ],
   },
