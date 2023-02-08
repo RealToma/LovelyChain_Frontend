@@ -32,11 +32,11 @@ export const dataFooterContact = [
     subLink: [
       {
         name: "Validated",
-        link: "/validator_details",
+        link: "/transaction_validated",
       },
       {
         name: "Pending",
-        link: "/validator_details",
+        link: "/transaction_pending",
       },
     ],
   },

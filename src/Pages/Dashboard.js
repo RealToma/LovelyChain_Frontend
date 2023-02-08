@@ -97,7 +97,12 @@ const Dashboard = () => {
             <TextSubject color={theme.palette.link.main}>
               Transactions History
             </TextSubject>
-            <SectionViewAll>
+            <SectionViewAll
+              onClick={() => {
+                navigate("/transaction_validated");
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+              }}
+            >
               <TextViewAll color={theme.palette.link.main}>
                 View All
               </TextViewAll>

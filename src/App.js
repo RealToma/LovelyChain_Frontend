@@ -12,6 +12,8 @@ import BlockDetails from "./Pages/Blocks/BlockDetails";
 import Reorgs from "./Pages/Reorgs";
 import Tokens from "./Pages/Tokens";
 import ValidatorDetails from "./Pages/ValidatorDetails/index";
+import TransactionValidated from "./Pages/Transactions/TransactionValidated";
+import TransactionPending from "./Pages/Transactions/TransactionPending";
 
 const App = () => {
   const [flagTheme, setFlagTheme] = useState("dark");
@@ -30,6 +32,8 @@ const App = () => {
             <Route path="/reorgs" element={<Reorgs />} />
             <Route path="/tokens" element={<Tokens />} />
             <Route path="/validator_details" element={<ValidatorDetails />} />
+            <Route path="/transaction_validated" element={<TransactionValidated />} />
+            <Route path="/transaction_pending" element={<TransactionPending />} />
           </Routes>
           <Footer />
         </Layout>
